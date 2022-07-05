@@ -138,3 +138,12 @@ CLONE
       github에 있던 폴더가 생성된다.
       fetch - 커밋 내려받기 merge - 커밋 합치기(fetch+merge=pull)
       내려받은 working tree 에서는 origin/master가 master보다 앞선다  merge를 해줘야함
+
+
+남의 저장소 사용하는 방법
+
+1. 그냥 다운로드
+2. 나의 컴퓨터의 특정 폴더로 clone
+3. 남의 github 저장소를나의 github으로 fork한다
+   나의 github에 있는 fork 된 저장소를 
+   나의 computer의 특정 폴더로 저장소를 clone 해서 사용
