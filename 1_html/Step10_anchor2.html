@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_anchor2.html</title>
+    <style>
+        /* 
+            특정 div를 가운데 정렬하는 방법
+            1. width를 결정
+            2. 좌우 마진을 auto로 설정하면 좌우 마진이 같게 설정되어 가운데 정렬 된다
+            centered specific div
+            1.set width
+            2. auto both side of margin 
+        */
+        .container{
+            width: 768px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .spacer{
+            height: 500px;
+            background-color: antiquewhite;
+        }
+    </style>
+</head>
+<body>
+  
+    <div class="container">
+        <h1>동일한 페이지 내에서의 이동(bookmark)</h1>
+        <ul id="list">
+            <li><a href="#one">one</a></li><!-- 링크에서 id를 가리킬 수 있음  able to direct id from link -->
+            <li><a href="#two">two</a></li>
+            <li><a href="#three">three</a></li>
+        </ul>
+        <div class="spacer"  id="one"></div>
+        <p>One. Lorem ipsum dolor sit amet consectetur adipisicing elit. Eos fugiat ipsum labore, non modi earum, aliquid sunt minus ratione adipisci nemo laboriosam reiciendis repellendus perferendis dicta assumenda dignissimos sint ipsa. <a href="#list">Back to list</a></p>
+        
+        <div class="spacer" id="two"></div>
+        <p>Two. Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias architecto necessitatibus eos error impedit distinctio dolore libero cumque itaque nemo, aliquid totam! Doloribus voluptatibus quisquam, animi commodi aut aliquid quam.<a href="#list">Back to list</a></p>
+        
+        <div class="spacer" id="three"></div>
+        <p>Three. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repudiandae voluptatum expedita cumque accusamus laudantium molestiae. Vel maiores iusto, suscipit cum exercitationem necessitatibus nesciunt est expedita excepturi corrupti vitae ipsum quibusdam?<a href="#list">Back to list</a></p>
+        <div class="class"></div>
+        
+    </div>
+</body>
+</html>

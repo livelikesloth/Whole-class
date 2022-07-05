@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step10_anchor.html</title>
+</head>
+<body>
+    <h1>a(anchor) 요소는 하이퍼링크, 책갈피, avascript 등을 수행할 때 사용한다.</h1>
+
+    <a href="hello.html">눌러보셈</a><br><!--상대경로 relative path-->
+    <a href="https://daum.net">daum으로 이동</a><br><!--웹상의 절대경로 absolute path from web-->
+    <a href="https://naver.com">naver로 이동</a><br>
+    <!-- 이미지에 링크 걸기 hyperlink on img -->
+    <a href="hello.html"><img src="images/bottle.png" alt=""></a>
+
+    <!-- 
+        inline 요소는 원래 block 요소를 자식요소로 가질수 없다 
+        단 a 요소만 예외적으로 div 같은 블럭요소를 자식요소로 가질수 있다. 
+        element inline cannot have block element for child
+        but only element a can have block element such as div
+    -->
+    <a href="hello.html">
+        <div>
+            <h3>어쩌구 저쩌구...</h3>
+            <p>
+                <img src="images/kim1.png">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Natus amet nam quam vero. Perferendis, corporis sequi amet ex nam debitis accusantium dolorem modi aut ullam cumque? Velit fuga corporis corrupti.
+            </p>
+        </div><!-- 넓은 div 영역 어디든지 클릭해서 이동할 수 있다 able to blick any div area-->
+    </a>
+
+    
+
+</body>
+</html>

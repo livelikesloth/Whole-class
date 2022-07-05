@@ -1,0 +1,50 @@
+visual studio code can make text files
+web browser cannot read and understand this tho...
+
+1. HTML, CSS, Javascript
+2. Oracle, Database
+3. Java
+4. Jsp
+5. Spring Frame Work
+6. Vue
+
+Why do we use web browser?
+    it can be used from any platform(Windows, Mac os, Android, ios...)
+    basically easier to publish for company 
+    web server application is already developed. no need to develop app. just make service
+
+
+HTML - information      
+    mark up language
+    <!-- --!> comment
+
+CSS - design
+    after title <style> </style>
+    elementName{
+        attributeName : value;
+    }
+    attribute names are set up
+
+Javascript - language
+    dev tools, console
+    Try right instantly Javascript runtime 
+    String " "
+    calculate
+    <script> </script>
+
+
+웹브라우저는 한번만 로딩을 하는 것이 아님 
+여러가지 소스를 로딩 웹서버가 있다면 서버에서 받아옴
+개인 컴퓨터에서 받아올 수도 있음 상대경로(Relative path), 절대경로(Absolute path)
+
+emmet (https://docs.emmet.io/cheat-sheet/)
+aaa.bbbbb = <aaa class="">
+aaa#bbbbb = <aaa id="">
+aaa.bbbbb#ccccc = <aaa class="" id=">"
+aaa*n = <aaa> * n
+.....
+
+
+
+
+현재경로는 ./ 상위경로는 ../

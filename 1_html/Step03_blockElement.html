@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step03_blockElement.html</title>
+    <style>
+        .image-panel{
+            border-width: 2px;
+            border-style: solid;
+            border-color: red;
+            border-radius: 10px;
+        } 
+        /* 선택자에서 띄어 쓰기를 하면 자손 요소를 의미한다 a space with selector mean descendant element */
+        .image-panel img{ /* 클래스 속성의 값이 image-panel 인 요소의 자손중에서 img 선택 select img from descendant elemt of image-panel */
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body><!-- parent element of div elements -->
+    <div>div 요소는 문단을 나타낼 때 사용합니다.</div>
+    <div>문단에 해당하는 것은 문자열 뿐만이 아니고 여러가지 요소도 될 수 있습니다.</div>
+    <div>div 요소는 폭을 100% 차지하는 block 요소 입니다.</div>
+    <br>
+    <div class="image-panel"><!--parent-->
+        <img src="images/bottle.png" alt=""><!--child 1-->
+        <img src="images/rabbit_1.png" alt=""><!--child 2-->
+    </div> <!-- child element of body element -->
+    <div class="image-panel">
+        <img src="images/image1.png" alt=""><!-- child element of div, decendent element of body -->
+        <img src="images/image2.png" alt="">
+    </div>
+    <img src="images/1.jpg" alt="">
+
+</body>
+</html>

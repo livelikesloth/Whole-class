@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form3.html</title>
+</head>
+<body>
+    <h1>html5 에서 추가된 form 요소</h1>
+    <p>
+        웹브라우져의 종류와 버전별로 지원이 될 수도 있고 안될 수도 있다.
+        <a href="https://caniuse.com">여기서 확인</a>
+    </p>
+
+    <form action="insert.jsp">
+        색상 선택 <input type="color" name="color">
+        <br>
+        범위 선택 <input type="range" name="range" min="0" max="100" step="10" value="30">
+        <br>
+        날짜 선택 <input type="date" name="date">
+        <br>
+        시간 선택 <input type="time" name="time">
+        <br>
+        날짜, 시간선택 <input type="datetime-local" name="datetime">
+        <br>
+        숫자 <input type="number" name="number" min="0" max="100" value="10" step="5">
+        <br>
+        이메일 <input type="email" name="email"><!--  모바일버전에서 키보드가 올라올때 @가 나옴  @ shoes on mobile keyboard-->
+        
+
+        <br><br>
+        <button type="submit">저장</button>
+    </form>
+
+    
+
+</body>
+</html>

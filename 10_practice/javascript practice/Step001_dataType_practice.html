@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step001_dataType_practice</title>
+
+
+</head>
+<body>
+    <h1>Step001_dataType_practice</h1>
+    <p id="text">이 문장을 바꿀 것입니다!</p>
+    <script>
+        let a=12;
+        let b=4;
+        let c=2;
+        let a1="두부";
+        let b2="유키";
+        let c3="소주";
+        let dogs=true;
+        let pets=true;
+        let isMale = true
+
+        let Dubu={b, a1, dogs, pets, isMale};
+        let Yuki={a, b2, dogs, pets, isMale};
+        let Soju={c, c3, pets, isMale};
+
+
+        console.log(Dubu)
+        console.log("Dubu")
+
+     
+var str = document.getElementById("text");
+
+str.innerHTML = Dubu;
+
+    </script>
+
+</body>
+</html>

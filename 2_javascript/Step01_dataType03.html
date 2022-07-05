@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType3.html </title>
+
+</head>
+<body>
+    <h1>javascript data type3</h1>
+
+    <script>
+        /*
+            한명의 회원정보라고 가정
+            번호. 이름. 성별
+            1. Dubu, true
+            user information
+            number. name. gender
+        */
+        let num=3;          //number type
+        let name="Soju"     //string type
+        let isMale=true;    //boolean type
+
+        //하나의 변수명으로 여러개의 값을 한번에 관리 할 수 는 없을까?
+        //Can I manage several values with one variable name?
+        let mem1={num:1, name:"Dubu", isMale:true};
+        let mem2={num:1, name:"Dubu", isMale:true}; 
+        //object 의 특정 방에 넣을 데이터를 변수명으로 불러와서 넣을 수도 있다 
+        let mem3={num:num, name:name, isMale:isMale}; 
+        //위를 줄여서 아래와 같이 object를 만들 수 있다 *최근문법
+        let mem4={num, name, isMale};
+                    
+        //    {} <--object type
+        //{key:value, key2:value2 ...}  {이름:값, 이름2:값2 ...}
+        //    .  <-- object에 있는 특정 저장공간을 가리킬 때 사용하다. 
+        //    . <--- point specific repositary in object
+
+        //a 는 object type
+        let a=mem1; // mem1에 있는 object type 값을 a에 복사
+        //b 는 nember typr
+        let b=mem1.num;
+        //c 는 string type
+        let c=mem1.name;
+        //d 는  boolean type
+        let d=mem1.isMale;
+
+        //object에 저장된 값을 수정해 보기
+        //edit value im object
+        mem2.num2;
+        mem2.name="Yuki";
+        mem2.isMale=false;
+
+        // 빈 object 를 만들고 나중에 필요에 따라 방을 추가할 수 있다
+        // make empty object first add data later
+        let mem5={};
+        mem5.num=3;
+        mem5.name="Dubu";
+        mem5.isMale=false;
+    </script>
+    
+</body>
+</html>

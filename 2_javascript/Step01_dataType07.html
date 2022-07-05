@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType7.html</title>
+</head>
+<body>
+
+    <h1>javascript data type7</h1>
+
+    <script>
+        //f1(); 아직 안말들어져서 호출 불가
+        f2();// 최우선적으로 만들어졌기 때문에 호출 가능
+        //이름이 없는 함수를 만들고 그 함수의 참조값을 f1이라는 변수에 대입
+        let f1=function(){
+            console.log("f1() 함수 호출됨")
+        };
+        //f2라는 이름의 함수 만들기
+        function f2(){
+            console.log("f2() 함수 호출됨")
+        }
+        // function f1(){} 이 let f1=finction(){} 보다 빠르게 만들어짐
+        // function XX(){} 타입은 최우선적으로 만들어짐
+        
+        /*
+            [새 문법]
+            function(){}를 줄여서 ()=>{}로 작성할 수 있다. arrow function
+        */
+        let f3=()=>{
+            console.log("f3()함수 호출됨");
+        };
+
+
+    </script>
+    
+</body>
+</html>

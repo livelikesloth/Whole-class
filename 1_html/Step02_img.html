@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_img.html</title>
+    <style>
+    /* id 속성으로 선택할 때는 선택자를 #으로 시작한다 # is selector for id element */
+        #one{  /* id="one" 인 요소에 적용할 css */
+            color:red;
+        }
+        #two{
+            color: blue;
+        }
+        #three{
+            color: green;
+        }
+        
+        /* class 속성으로 선택할 때는 선택자를 . 으로 시작한다 . is selector for class element*/
+        .my-class{ /* class="my-class" 인 요소에 적용할 css  css for class="my-class" */
+            font-style: italic;
+        }
+
+        .han-img{
+            width: 200px;
+            height: 200px;
+        }
+    
+    </style>
+</head>
+<body>
+    <h1>이미지 입니다.</h1>
+    <!-- h태그는 한줄 전체를 사용한다 h tag uses whole block (block element)-->
+    <img src="images/bottle.png" alt="the beer bottle">
+    <!-- 개인 c드라이브에서 가져온 이미지 image from c drive on my computer -->
+    <!-- 이미지는 필요한 공간만큼 확보 후 우측으로 쌓인다  if there is enough space image stacks from left to right (inline element)-->
+    <br><!-- 강제 개행 The line break element-->
+    <img src="http://pics.gmarket.co.kr/pc/single/kr/common/image__logo.png" alt="Gmarket logo">
+     <!--
+        img 요소의 src 속성의 값으로는 로딩할 이미지가 위치한 경로를 적어놓으면 
+        웹브라우저가 해당경로를 찾아서 이미지 데이터를 받아와서 화면상에 표시해 준다.
+        alt 속성의 값으로는 이미지의 자세한 설명을 적으면 된다.
+        src attribute of img element value : path of image will be loaded
+        web browser will find, download, show
+        alt attribute value = information of image 
+
+        img 요소는 인라인 요소이기 때문에 개행을 따로 해주지 않으면 한줄에 표기된다.
+        img element is inline element so if is not linebrocken imgs will be one line
+    -->
+
+    <!-- id  속성은 특정 요소를 유일하게 식별하고자 할 때 사용하는 속성이다. 겹치지 않으면 마음대로 지정 할 수 있다.
+         id attribute = use when I want to pick some special attributes if they are not the same I can make my own -->
+    <p id="one">단락을 나타내는 p 요소</p>
+
+    <!-- class. 각속성을 특정 요소들을 같은 그룹으로 구성하고자 할 때 사용하는 속성 
+         class = group some attributes -->
+    <div id="two" class="my-class">문단을 나타내는 div 요소</div>
+    <h2 id="three" class="my-class">제목을 나타내는 hn 요소</h2>
+
+    <h1> 이미지 요소의 크기 조절하기</h1>
+    <!-- 1번과 3번 이미지의 폭과 높이를 200px, 200px 로 변경하기
+         change image1, image3 width, height 200px -->
+    <img src="images/1.jpg" class="han-img">
+    <img src="images/2.jpg" >
+    <img src="images/3.jpg" class="han-img" >
+
+        
+    
+</body>
+</html>

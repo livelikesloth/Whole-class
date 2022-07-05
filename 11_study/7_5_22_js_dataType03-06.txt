@@ -1,0 +1,101 @@
+ Javascript Step01_dataType3.html
+            ~ Step01_dataType6.html
+
+복습
+
+변수 variable
+    값을 저장할 수 있는 이름이 지어진 기억공간
+    global area - global variable
+        어디에서나 다 사용 가능
+    값을 필요한 시점에 바꿀 수도 있다.
+    페이지 로딩 시점에 초기값이 있지만 console에서 바꿀 수 있음
+        (페이지를 다시 로딩하면 초기화)
+    한번 선언한 변수는 다시 선언하면 안된다
+        (ex let a=1 이 코딩이 되어있을 때 
+         콘솔에서 다시 let a=2 선언하지 않음 a=2면 충분)
+    연산한 위치는 값으로 대치된다.
+            let a=10+10  산술연산자 +를 연산한 후 대입연산자 =가 연산된다
+            10>1  true라는 연산이 됨
+
+    -number type
+        숫자
+    -string type
+        문자
+    -boolean type
+        참과 거짓
+    -object type
+        데이터를 묶어 하나로 관리. {}사용
+        {key:value} 우측에는 값, 좌측에는 이름 -ex {num:10}
+        여러개를 사용하기 위해서는 , 를 사용하면 됨 
+        key 값은 예측이 가능하게 만드는 것이 좋다.
+        기호 .은  object에 있는 특정 저장공간을 가리킬 때 사용하다. 
+            ex let mem1={num:1, name:"Dubu", isMale:true};를
+            mem1.num   mem1.isMale 등 으로 불러올 수 있다
+        필요한 시점에 수정도 가능
+            ex) mem1.num=2    mem1.isMale=false
+    -function type
+
+
+    같은 값에 대한 이야기
+    -number, string, boolean type 이 들어있는 변수 안에는
+     실제로 그 값이 들어 있다고 생각해도 된다.
+        내      iphone 13 pro max
+        친구    iphone 13 pro max
+            둘은 다른 폰이다
+
+        let a = 10;
+        let b = "kim";
+        let c = true;
+                    이 셋은 문제가 되지 않음
+    
+    -object, array function type은 heap 영역에 만들어진다.
+        (heap영역  즉 사물함 영역에 만들어진다.)
+     사물함은 사물함 번호로 관리가 된다.
+     사물함 번호를 프로그래밍 적인 관범에서는"참조값"이라고 부른다.
+     "참조값"은 사물함 key라고 상상을 하면 된다.
+        let mem1 ={1};      {}은 무작위 사물함 영역값이 된다.
+                            {}안의 값은 무작위 사물함의 안에 들어간다.
+        let mem2 ={1};      mem2의 {}는 사물함 11로 간다고 가정하고
+                            mem1의 {} 는 사물함 30 으로 갔다고 가정한다면
+                            둘의 출력되는 값은 1로 같지만 다른 사물함에 들어가 있기 때문에
+                            둘은 프로그래밍 상 다른 값이 된다.
+                            들어있는 물건은 똑같아도 다른 사물함 키를 가지고 있음.
+    
+        let d = {num:1};
+    
+    
+    function type
+        엘리베이터에서 뭄닫기 버튼을 누른다 -> 문을 닫는 함수 호출 -> 문이 닫힘.
+
+
+    Figuring out data type
+
+    document.querySelectorAll("h1")[0].innerText
+
+    document <- object type
+        document.quertSelectorAll <- function type
+            document.querySelectorAll("h1") <- array type
+                document.querySelectorAll("h1")[0] <-object type
+                    document.querySelectorAll("h1")[0].innerText ="eh?";
+                                                                  수정가능
+    
+    alert(X)
+    console.log(X)
+    let names=[];
+    names.push(X)
+    names.splice(2,1)
+
+
+    1+1
+    2
+        산술연산
+
+    "두부"+1
+    '두부1'
+        연결연산
+
+    *매개변수*
+    printMsg 이용
+    이름 입력하면
+    안녕하세요 "이름"님 만들어보기
+    PrintSum 이용 계산기 만들기

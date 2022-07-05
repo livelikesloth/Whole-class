@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step09_form.html</title>
+</head>
+<body>
+    <h1> 폼(form) 요소 작성하기 </h1>
+    <!--
+        form 은 서버에 전송할 양식이다.
+        action="서버에 전송할 경로"
+        현재는 서버가 없기 때문에 action을 테스트 할수는 없다.
+        양식 작성법만 학습 
+        action="directory to server"
+        now I cannot test action, do not have a server
+        Just practice forming 
+    -->
+    <form action="login.jsp">
+        <!--  
+            label 의 for 속성값과
+            input 의 id 속성의 값이 동일하게 작성이 되어야 한다.
+            name 속성의 값은 서버에서 필요한 값이다
+            value of for attribute for label = value of id attribute for input
+            Server needs value of name attribute
+        -->
+        <label for="email">이메일</label>
+        <input type="email" name="email" id="email">
+        <label for="pwd">비밀번호</label>
+        <input type="password" name="pwd" id="pwd"><!-- input type="password" hidden string -->
+        <!-- 
+            제출 버튼은 반드시 form 요소 안에 위치해야 한다
+            submit button has to be located inside of form element 
+        -->
+        <button type="submit"> 로그인 </button>
+    </form>
+
+
+
+
+
+
+</body>
+</html>

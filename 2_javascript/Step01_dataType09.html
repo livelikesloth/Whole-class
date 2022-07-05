@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType9.html</title>
+</head>
+<body>
+    <h1>javascript data type 9</h1>
+    <script>
+        let getData=function(){
+            // 어떤 복잡한 과정을 거쳐서 얻어낸 object라고 가정
+            let obj={num:1, name:"두부", addr:"페어팩스"};
+            //return 예약어를 이용해서 함수를 호출한 곳으로 object type 돌려주기
+            return obj;
+        };
+        let getFriends=function(){
+            //어떤 복잡한 과정을 거쳐서 얻어낸 array라고 가정
+            let friends=["두부", "유키", "소주", "브라이언", "여비"];
+            return friends;
+        };
+
+        let a=getData;
+        let b=getData();
+        let c=getData().num;
+        let d=getData().name;
+        let e=getData().addr;
+        
+        let f=getFriends;
+        let g=getFriends();
+        let h=getFriends()[0];
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType5.html</title>
+
+</head>
+
+<body>
+    <h1>javascript data type5</h1>
+    <script>
+        //배열에는 주로 한가지 type의 데이터만 담는게 일반적이다.
+        let nums=[10,20,30,40,50];
+        let names=["두부", "유키", "소주", "여비", "브라이언"];
+        let data=[true, true, true, false, true];
+
+        //회원 목록을 담고 싶다면?
+        
+        let members=[
+            {nums:1, names:"두부", addr:"페어펙스"},
+            {nums:2, names:"유키", addr:"하이데져트"},
+            {nums:3, names:"소주", addr:"리치몬드"}
+        ];
+
+        //array type
+        let a=members;
+        //object type
+        let b=members[0];
+        //number type 1
+        let c=members[0].nums;
+            /*
+                members - array
+                members[] - object
+                members[].nums - number
+            */
+        //string type "두부"
+        let d=members[0].names;
+        //string type "페어펙스"
+        let e=members[0].addr;
+
+
+
+    </script>
+    
+    
+</body>
+</html>
+
+
+<!-- 
+        document.querySelectorAll()[0].innerText
+ document - object  ? 뒤에 . 이 있어서
+ document.querySelectorAll - function type ? 뒤에()이 있어서
+ document.querySelectorAll() - array type ? 뒤에[]이 있어서
+ document.querySelectorAll()[0] - object type ? 뒤에 .이 있어서
+
+-->

@@ -1,0 +1,90 @@
+<!DOCTYPE html><!-- 이 문서는 html5 형식의 문서라고 웹브라우저에게 알리는  선언부  Declaration of  html5 form document -->
+<!-- html 문서는 head 요소와 body 요소로 구성된다  html document consist of head element and body element-->
+<html lang="en">
+<head>
+    <!-- head 요소 안에는 설정 정보나 웹페이지의 제목등으로 구성된다.  head element includes setting information, title of web page-->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Page</title> <!-- 웹 페이지의 제목 Title of web page -->
+    <style>
+        /*  여기는 css 영역 area of CSS */
+        /*
+            선택자{
+                css 속성 : 값 ;
+                css 속성2 : 값 ;
+                css 속성3 : 값 ;
+            }
+            Selector{
+                css attribute : value ;
+                css attribute2 : value ;
+                css attribute3 : value ;
+            }
+
+            - 사용할수 있는 css 속성은 이미 정해져 있다 ( 마음대로 지어 낼수 없다 ) 
+            - css 속성에 적용할 값은 이미 정해진 카테고리 내에서 고르는것도 있고
+              또는 크기나 색상같은 값은 정해진 단위에 맞춰서 원하는 값을 지정하면 된다. 
+            - css attributes are already set up (cannot custom make)
+            - you can choose css attribute from categories or set value of size, color etc
+        */
+
+        h1{
+            color: rgb(165, 108, 42);
+            background-color: olive;
+        }
+        
+
+    </style>
+</head>
+<body><!-- body 요소에는 주로 화면에 나타낼 요소를 작성한다. usually body attributes for screen -->
+    <!--
+        여기는  HTML 영역에서의 주석입니다.
+        웹브라우져가 해석하지 않아요. 
+        메모나, 필기를 이 영역에서 작성하면 됩니다.
+        This comment sectin is for HTML 
+        web browser does not translate
+        use is for memo or note 
+    -->
+    <h1>제목입니다.</h1>
+    <script>
+             //여기는 javascript의 영역 입니다. 한줄 주석 javascript comment section one line comment
+
+             /* 
+              여러줄 주석입니다. multi line comment
+             */
+             /*
+             여기에 작성한 javascript는 *페이지 로딩시*에 웹브라우져가 해석합니다.
+             javascript codes written here will be translate when *PAGE LOADS*
+             */
+
+             //페이지 로딩시에 알림창으로 여러분의 이름을 띄워보세요 alert your name when page loads
+       alert("민현진"); // alert는 빌트인 함수 alert - built in function
+       
+
+             //페이지 로딩시에 콘솔창으로 숫자 999를 출력해 보세요 print in console when page loads
+       console.log(999);
+
+              //greet  이라는 이름의 함수(기능) 만들기 make funtion "greet"
+       function greet(){
+              //함수 안에는 실행할 javascript를 작성할 수 있다  You can wright javascript code in funtion
+             //페이지 로딩시에 실행되지 않는다. 미리 준비하는 역할. 특정 시점에 실행하기 위해 준비 *예약어* it does not run when page loads, =reserved word
+
+        alert("Hello!");
+              //콘솔에 greet()를 입력하니 실행되었다 it run when I wright greet() on console
+             //실행하고 싶을때는 괄호()를 사용 when you want to run it use ()
+       
+       }
+       function bottle(){
+        alert("BOTTLE")
+       }
+    </script>
+    <img src="C:\acorn202206\visual_work\html\images/bottle.png" alt="beer" onmouseover="bottle();"><!--(Absolute path-->
+        <!--  함수의 특정 시점을 결정하는 방법은 여러가지가 있다  There are alot of way call function-->
+    <button onclick="greet();">greetings</button> 
+                        <!-- onmouseover="****" onlick="****" **** 자바스크립트 영역  "****" area of javascript-->
+         <!-- 버튼을 눌르면 준비된 자바스크립트가 실행된다. when you press the button javascript code will be run -->
+    
+        <!-- xxx=" "  attribute 속성 -->
+</body>
+</html>
+

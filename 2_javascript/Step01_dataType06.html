@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType6.html</title>
+</head>
+<body>
+    <h1>javascript datat type6</h1>
+    
+    <button onclick="f1();f1()">PRESS IT!</button>
+    <!-- 
+        onclick= 다음의 "" 안은 js의 영역 
+        왼쪽을 입력 할 때 마다 실행됨 
+        여러줄을 작성하려면 ; 사용
+        global 영역에서 만든 function은 어디서든 끌어와 사용가능
+
+        " " after onclick is area of js
+        abele to pull any functions from global area
+    -->
+
+    <script>
+        /*
+            특정 시점에 일괄 실행할 javascript를 미리 준비해 놓기 위해서는
+            function type data 가 필요하다
+            need function type data for prepare to run some point of time
+        */
+
+        //number type data를 만들어서 num1이라는 이름의 변수에 대입
+        let num1=10;
+        // stripng type data를 만들어서 name1이라는 이름의 변수에 대입
+        let name1="dubu"
+        // object type data 를 만들어서 mem1이라는 이름의 변수에 대입
+        let mem1={};
+
+        //function type data 를 만들어서 f1이라는 이름의 변수에 대입
+        let f1=function(){ 
+            console.log("one");
+            console.log("two");
+            console.log("three");
+        }; /* 
+            function type의 
+            {}는 특정 시점 실행할 js들을 모아놓는 곳
+            준비 시켜 놓는 곳 f1()로 호출(call)이 가능하다
+            call = 준비해둔 js 를 실행
+            function type data는 참조도 가능하고 호출도 가능
+            {} in function type gathers js codes to call
+            call = run prepared js codes
+            function type data is able to be called, referenced
+            */
+
+            /*
+            function type data를 만들지 않고 그냥 사용한다면 로딩시점에 실행
+            if there is no function type data 
+            it will run when page is loaded
+            console.log("one");
+            console.log("two");
+            console.log("three");
+            */
+
+        // f1안에 들어 있는 값을 참조
+        // reference value in f1
+        let f2=f1;
+
+        let result=f1();
+
+        //기본 제공되는 built in function 들이 있다.
+        //there are some built in functions
+        // alert()
+
+        let a=alert;
+
+       
+        
+    </script>
+    
+</body>
+</html>
