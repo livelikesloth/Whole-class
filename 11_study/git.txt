@@ -147,3 +147,15 @@ CLONE
 3. 남의 github 저장소를나의 github으로 fork한다
    나의 github에 있는 fork 된 저장소를 
    나의 computer의 특정 폴더로 저장소를 clone 해서 사용
+
+
+
+git commit 만 단독으로 사용하게 된다면 editor가 열림
+      vi editor
+            edit mode(INTERT)
+                  commit message를 적는다. 여러줄 적을 수 있음
+                  명령모드로 바꿈 (esc)
+                  :wq 
+
+            command mode(default)명령모드
+                  edit mode로 가려면 enter i (INSERT)
