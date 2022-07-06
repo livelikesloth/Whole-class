@@ -51,4 +51,32 @@ function type
         대입연산자를 기억하면 편함
         두개 이상 들어갈 수 도 있음.
 
+
+        docuemnt object 문서 객체    XXX. 식으로 참조할 수 있음
+        필요하다면 접근할 수 있음.
+        첫번째 p element를 조작하기 위해서는 그것의  key를 알아야함
+
+        document.querySelectorAll("p")
+            p요소의 참조값이 배열 순서대로 있다.
+            document.querySelectorAll("p")[0] 0번방 참조할 수 있음
+            document.querySelectorAll("p")[0].innerText 이너 텍스트 보기 
+            document.querySelectorAll("p")[0].innerText="Dubu" 이너 텍스트를 Dubu로 바꾸기
+
+
+
+        document.querySelector
+            배열을 불러오지 않는다 
+            가장 첫번째만 불러옴
+            document.querySelector(" ") 괄호 안에 선택자를 입력하면 
+            그 선택자를 불러와서 실행함. 
+
+function plus(){
+            //입력한 값을 읽어온다
+            let a=document.querySelector("#num1").value;
+            let b=document.querySelector("#num2").value;
+            //연산의 값을 얻어낸다
+            let result=Number(a)+Number(b)
+            // 종종 문자열 값을 숫자로 바꿔줄 필요가 있다
+            document.querySelector("#result").innerText=result;
+            //span 요소의 innerText로 출력하기  
         

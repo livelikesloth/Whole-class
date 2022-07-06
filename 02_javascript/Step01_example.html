@@ -7,24 +7,59 @@
     <title>Step01_example.html</title>
 </head>
 <body>
-    <h1>javascript data type examples</h1>
+    <h1>javascript examples 1</h1>
     
     <p> this is p1<!--inner text--></p>
-    <p> this is p2</p>
-    <p> this is p3</p>
-    <p> this is p4</p>
-    <p> this is p5</p>
+    <p id="one" class="my-class"> this is p2</p>
+    <p id="two" class="my-class"> this is p3</p>
+    <p class="my-class"> this is p4</p>
+    <p id="three"> this is p5</p>
+
+    <button onclick="changeOne()">Change Second</button><br>
+    <button onclick="changeTwo()">Change Third</button><br>
+    <button onclick="changeThree()">Change Forth</button>
+
+
     <!--
         docuemnt object 문서 객체    XXX. 식으로 참조할 수 있음
         필요하다면 접근할 수 있음.
         첫번째 p element를 조작하기 위해서는 그것의  key를 알아야함
+
         document.querySelectorAll("p")
             p요소의 참조값이 배열 순서대로 있다.
             document.querySelectorAll("p")[0] 0번방 참조할 수 있음
             document.querySelectorAll("p")[0].innerText 이너 텍스트 보기 
             document.querySelectorAll("p")[0].innerText="Dubu" 이너 텍스트를 Dubu로 바꾸기
+
+
+
+        document.querySelector
+            배열을 불러오지 않는다 
+            가장 첫번째만 불러옴
+            document.querySelector(" ") 괄호 안에 선택자를 입력하면 
+            그 선택자를 불러와서 실행함. 
     -->
-    
+    <script>
+        
+        document.querySelectorAll("p")[0].innerText="Dubu";
+        /*
+            바꾸기 버튼을 누르면 id가 one인 요소의 inner Text를 
+            "Yuki"로 바뀌도록 프로그래밍 하기.
+        */
+        function changeOne(){
+            document.querySelector("#one").innerText="Yuki"; 
+        }
+        function changeTwo(){
+            document.querySelector("#two").innerText="Soju"
+        }
+        function changeThree(){
+            document.querySelector("#three").innerText="Jazz"
+        }
+
+    </script>
     
 </body>
 </html>
+
+
+<!--  여러단어 있어서 다 같은거로 바꾸는 게임 만들기 -->
