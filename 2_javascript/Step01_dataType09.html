@@ -21,8 +21,8 @@
             return friends;
         };
 
-        let a=getData;
-        let b=getData();
+        let a=getData();
+        let b=getData(); //a와 b 모양은 같지만 다르다 호출할 때마다 새로운 object가 계속 생성됨.
         let c=getData().num;
         let d=getData().name;
         let e=getData().addr;

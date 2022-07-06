@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step01_dataType11.html</title>
+    <script>
+        //confirm() 함수는 alert()+boolean 의견을 물을 때 사용.
+        //let wantDelete=confirm("Want to delete?")
+
+        //prompt() 함수는 string type을 입력 받고  return 할 때 사용
+        //let msg=prompt("enter");
+
+    </script>
+</head>
+<body>
+    <h1>javascript data type 11</h1>
+    <button onclick="remove()"> Delete </button>
+    <button onclick="input()"> Enter </button>
+    <button onclick="output()">Print</button>
+    <script>
+    //global area 전역 변수
+        function remove(){
+        //local area 지역 변수
+
+            //삭제 여부를 입력받아서 지역변수 askDelete에 담는다
+            let askDelete=confirm("Want to delete?");
+            //만일 삭제할거라면 (askDelete 에 true가 들어있다면)
+            if(askDelete==true){
+                //삭제하는 작업하기
+                console.log("Your account has been Deleted")
+            }
+            if(askDelete==false){
+                console.log("Canceled")
+            }
+        } //함수 안에서 만들어진 변수는 함수 밖에서 접근을 못함. capsulize
+        
+        //페이지 로딩 시점에 global 영역에 변수를 만들어 놓는다.
+        let msg;
+
+        function input(){
+                // global 영역에 만들어진 변수에 입력한 문자열을 저장한다.
+                msg=prompt("Enter your message!")
+            }
+
+        function output(){
+                //global 영역에 만들어진 변수에 있는 값을 참조해서 작업을 한다.
+                console.log(msg+"hi");
+            }
+       
+        
+    //글로벌(전역)변수는 어디서든 사용 가능
+        //로컬(지역)변수는 불가능
+    </script>
+    
+</body>
+</html>

@@ -18,19 +18,18 @@
             함수를 호출하는 시점에 만들어지고 함수가 종료되면 사라진다.
         */
         //변수를 선언만 하고 어떤 값도 넣지  않으면 undefined 가 들어있다.
-    
+        let myName;
 
         let str="안녕하세요";
 
-
+                     //실제로 아래 function은  heap 영역에 들어감
         let printMsg=function(msg){
             console.log("----------");
             console.log(msg);
             console.log("----------")
         };
         //대입연산자를 떠올리면 기억하기 쉬움
-
-        //함수 호출하면서 string type 데이터를 즉석에서 만들어서 전달학
+        //함수 호출하면서 string type 데이터를 즉석에서 만들어서 전달함
         printMsg("hello");
         //함수 호출하면서 string type 데이터가 들어있는 변수명을 이용해서 값 전달하기
         printMsg(str);
@@ -44,6 +43,7 @@
             //문자열 정보를 구성하고
             let info=num1+" 과 "+num2+" 의 합은 " +result+" 입니다. ";
             //구성된 문자열을 콘솔창에 출력하기
+            //위의 +는 결합 연산자(연결 연산자)
             console.log(info);
         }
         
