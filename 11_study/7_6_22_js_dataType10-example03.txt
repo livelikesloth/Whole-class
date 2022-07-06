@@ -1,5 +1,5 @@
  Javascript Step01_dataType09.html
-            ~ Step_dataType.html
+            ~ Step01_example03.html
 
 함수 타입
 
