@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step001_example1.html</title>
+</head>
+<body>
+    <!-- 
+        1.문자 출력해놓고 버튼 누르면 바꾸기
+        2.이름 입력하고 인사해주기
+        3.빈칸에 입력하면 출력하고 지우기
+        4.간이계산기 만들기
+    -->
+    
+   
+1.문자 출력해놓고 버튼 누르면 바꾸기<br>
+    <p id="p1">p1 입니다.</p>
+    <p id="p2">p2 입니다.</p>
+    <p id="p3">p3 입니다.</p>
+    <p id="p4">p4 입니다.</p>
+    <p id="p5">p5 입니다.</p>
+
+    <button onclick="d1()">1번</button><br>
+    <button onclick="d2()">2번</button><br>
+    <button onclick="d3()">3번</button><br>
+    <button onclick="d4()">4번</button><br>
+    <button onclick="d5()">5번</button><br>
+
+    <script >
+        function d1(){
+           document.querySelector("#p1").innerText="두부";
+        }
+        function d2(){
+           document.querySelector("#p2").innerText="유키";
+        }
+        function d3(){
+           document.querySelector("#p3").innerText="소주";
+        }
+        function d4(){
+           document.querySelector("#p4").innerText="재즈";
+        }
+        function d5(){
+           document.querySelector("#p5").innerText="멍멍";
+        }
+    </script><br>
+
+2.이름 입력하고 인사해주기<br>
+    <input type="text" id="name">
+    <button onclick="sayHi()">인사해요!</button>
+    <script>
+        function sayHi(){
+            alert(document.querySelector("#name").value+ "님 안녕하세요!");
+        }
+    </script><br><br>
+
+3.빈칸에 입력하면 출력하고 지우기<br>
+    <input type="text" id="bar">
+    <button onclick="sendIt()">send</button>
+    <button onclick="deleteAll()">delete</button><br>
+    <span id="printIt"></span>
+    
+
+    <script>
+        function sendIt(){
+            let a = document.querySelector("#bar").value;
+            document.querySelector("#printIt").innerText=a;
+        }
+        function deleteAll(){
+            document.querySelector("#bar").value="";
+            document.querySelector("#printIt").innerText="";
+            
+        }
+   </script><br><br>
+4.간이계산기 만들기<br>
+    <input type="text" id="left">
+    <button onclick="plus()">+</button>
+    <button onclick="minus()">-</button>
+    <input type="text" id="right">
+    =<span id="total"> </span><br>
+    <button onclick="clearThem()">clear</button>
+    <script>
+        function plus(){
+            let a=document.querySelector("#left").value;
+            let b=document.querySelector("#right").value;
+            document.querySelector("#total").innerText=Number(a)+Number(b);
+        }
+        function minus(){
+            let a=document.querySelector("#left").value;
+            let b=document.querySelector("#right").value;
+            document.querySelector("#total").innerText=Number(a)-Number(b);
+        }
+        function clearThem(){
+            document.querySelector("#left").value="";
+            document.querySelector("#right").value="";
+            document.querySelector("#total").innerText="";
+        }
+//잘했다
+    </script>
+
+
+</body>
+
+</html>
