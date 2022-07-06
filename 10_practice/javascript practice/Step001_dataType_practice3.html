@@ -13,9 +13,15 @@
         안녕하세요 "이름"님 만들어보기
     -->
     <script>
-        function greeting(){
+        function greeting1(){
             alert("반갑습니다! "+document.getElementById("a").value+"님 안녕하세요?");
         };
+        
+        function greeting2(){
+            alert("Hi! "+document.getElementById("input2").value+" Hor are you?");
+           
+        }
+   
         
     
     </script>
@@ -28,7 +34,18 @@
     <br>
     <input type="text" name="nameHere" id='a' placeholder="이곳에 입력하세요.">
     <br><br>
-    <button onclick="greeting()">입력</button>
+    <button onclick="greeting1()">입력</button>
+    
+
+    <h1>HI?</h1>
+    <input type="text" name="input1" id="input2" placeholder="write your name here">
+    <button onclick="greeting2()">enter</button>
+    
+   
+    
+
+
+
     
 <!-- 
     7.6.2022 성공

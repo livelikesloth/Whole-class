@@ -1,4 +1,4 @@
- Javascript Step01_dataType10.html
+ Javascript Step01_dataType09.html
             ~ Step_dataType.html
 
 함수 타입
@@ -50,5 +50,5 @@ function type
     매개변수
         대입연산자를 기억하면 편함
         두개 이상 들어갈 수 도 있음.
-        
+
         
