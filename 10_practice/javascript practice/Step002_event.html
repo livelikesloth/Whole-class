@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step002_event.html</title>
+
+    <style>
+        .a{
+            width: 200px;
+            height: 200px;
+            border: 3px solid red;
+        }
+    </style>
+</head>
+<body>
+    누르고 지워지는 버튼 만들기<br>
+    <button id="clickIt">눌러요</button>
+    <button id="clickIt2">눌러요2</button>
+    <button id="deleteIt">지워요</button>
+    <p id="console"></p>
+    <script>
+        document.querySelector("#clickIt").addEventListener("click", function(){
+            document.querySelector("#console").innerText="안녕하세요";
+        })
+        document.querySelector("#clickIt2").addEventListener("click", function(){
+            document.querySelector("#console").innerText="안녕안녕";
+        })
+        document.querySelector("#deleteIt").addEventListener("click",function(){
+            document.querySelector("#console").innerText="";
+        })
+           
+
+    </script><br><br>
+    
+    예쁜 박스 만들기
+    <div id="myBox"></div>
+    <div id="yourBox"></div>
+
+    <script>
+        document.querySelector("#myBox").style.width="100px";
+        document.querySelector("#myBox").style.height="110px";
+        document.querySelector("#myBox").style.border="1px solid blue";
+        document.querySelector("#myBox").style.backgroundColor="yellow";
+
+        let yourDiv=document.querySelector("#yourBox")
+            yourDiv.style.width="100px";
+            yourDiv.style.height="100px";
+            yourDiv.style.border="3px solid blue";
+            yourDiv.style.backgroundColor="yellow";
+
+
+    </script>
+
+    <br><br>박스 만들어서 클릭하면 색바뀌고 돌아오고 좌표 구하기 
+
+    <div class="a" id="b"></div>
+
+    <script>
+        document.querySelector("#b").addEventListener("mousedown", function(){
+            document.querySelector("#b").style.backgroundColor="yellow";
+        })
+        document.querySelector("#b").addEventListener("mouseup", function(){
+            document.querySelector("#b").style.backgroundColor="white";
+        })
+        document.querySelector("#b").addEventListener("mousemove", function(event){
+            let x=event.offsetX;
+            let y=event.offsetY;
+            document.querySelector("#b").innerText="x"+x+" y"+y;
+        })
+
+    </script>
+<br><br>
+사진 움직이기
+    <button id="moveRightBtn">우측으로 움직이기</button>
+    <button id="moveLeftBtn">좌측으로 움직이기</button>
+    <button id="moveRiToBtn">우하단으로 움직이기</button>
+    <button id="resetBtn">초기화</button>
+    <br>
+    <img src="images/redbird.png" id="bdImg">
+
+    <script>
+        let=mLeft=0;
+        let=mRight=0;
+
+        document.querySelector("#moveRightBtn").addEventListener("click", function(){
+            mLeft=mLeft+100;
+            
+            document.querySelector("#bdImg").style.marginLeft=mLeft+"px";
+        });
+        document.querySelector("#moveLeftBtn").addEventListener("click", function(){
+            if(mLeft !=0){
+                mLeft=mLeft-100;
+                document.querySelector("#bdImg").style.marginLeft=mLeft+"px"
+            }
+        });//물어보기
+        document.querySelector("#moveRTBtn").addEventListener("click", function(){
+            mLeft=mLeft+100;
+            mTop=mTop+100;
+            document.querySelector("#bdImg").style.marginLeft=mLeft+"px"
+            document.querySelector("#bdImg").style.marginTop=mLopt+"px"
+
+        })
+        // document.querySelector("#resetBtn").addEventListener("click", function(){
+        //     mLeft = 0;
+        //     mRight = 0;
+        //     document.querySelector("#bdImg").style=marginLeft= mLeft+"px"
+        //     document.querySelector("#bdImg").style=marginTop= mTop+"px"
+        // })
+        document.querySelector("#resetBtn").addEventListener("click", function(){
+            mLeft = 0;
+            mTop = 0;
+            document.querySelector("#bdIng").style.marginLeft = mLeft+"px";
+            document.querySelector("#bdImg").style.marginTop = mTop+"px";
+        });
+       
+
+    </script>
+
+
+    
+</body>
+</html>
