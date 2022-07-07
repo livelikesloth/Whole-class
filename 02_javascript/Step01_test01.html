@@ -17,37 +17,35 @@
     <span id="result"></span>
     <br>
     <button onclick="clearAll()">Clear</button>
-            <!-- 
-                이상 문서 객체들(document objects) 전부 heap area에 저장된다.
-                안의 js를 원하는 시점에 실행하고 싶다면 key값을 알아야 한다.
-                그 키값을 조절할 수 있도록 도와주는 개체가 document
-            -->
+            
 
     <script>
-        
-        
+        /*
+            페이지 로딩 시점에 함수에서 자주 사용되는 값을 미리 얻어내서 변수에 담아 놓는다면?
+        */
+
+        let input1=document.querySelector("#num1");
+        let input2=document.querySelector("#num2");
+        // 페이지 로딩 시점의 값을 얻어낸다 = ""
+
         function plus(){
-            //입력한 값을 읽어온다
-            let a=document.querySelector("#num1").value;
-            let b=document.querySelector("#num2").value;
-            //연산의 값을 얻어낸다
-            let result=Number(a)+Number(b)
-            // 종종 문자열 값을 숫자로 바꿔줄 필요가 있다
+            let a=input1.value;
+            let b=input2.value;
+            let result=Number(a)+Number(b);
             document.querySelector("#result").innerText=result;
-            //span 요소의 innerText로 출력하기  
         }
+        //고로 ""+""라서 값이 나오지 않음.
+        //빈칸에 입력할 때 마다 업데이트 해주는 함수를 만든다면 가능하다  (onChange와 update함수)
+
+            //내가 기능이 필요한 "시점"을 잘 계산해서 코드를 해야한다.
+            
+
         function minus(){
             let a=document.querySelector("#num1").value;
             let b=document.querySelector("#num2").value;
             let result=Number(a)-Number(b)
             document.querySelector("#result").innerText=result;
-                /*
-                    #num1의 값을 구한다
-                    #num2의 값을 구한다
-                    둘을 더한다.
-                    출력한다.   
-                */
-        } 
+        }
         function multiple(){
             let a=document.querySelector("#num1").value;
             let b=document.querySelector("#num2").value;

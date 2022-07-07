@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_event01.html</title>
+</head>
+<body>
+    <!--
+        이벤트 처리를 onXXX="" 속성을 사용해서 처리하면  global 변수(함수)가 필요하다
+        global 변수(함수)를 많이 만드는 것은 바람직하지 않다.
+        사용자가 조작할 수도 있다.
+        공동코드를 할 때 변수명이 겹치는 경우도 생길 수 있음.
+    -->
+    
+    <button onclick="clicked()">눌러봐요</button>
+    <!-- 호출하려면 global area에 코드 해야함 -->
+    <button id="myBtn">눌러보세요</button>
+
+    <p id="console"></p>
+
+    <script>
+        //global 변수(함수) clicked
+        let clicked=function(){
+            document.querySelector("#console").innerText="버튼을 눌렀네요?"
+        };
+
+        document.querySelector("#myBtn").addEventListener("click", function()
+                {document.querySelector("#console").innerText="눌렀넹";});
+                //global 영역에 함수를 만들지 않고도 동작한다.
+                //순서가 중요 
+
+    </script>
+    
+</body>
+</html>
