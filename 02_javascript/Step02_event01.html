@@ -16,7 +16,8 @@
     
     <button onclick="clicked()">눌러봐요</button>
     <!-- 호출하려면 global area에 코드 해야함 -->
-    <button id="myBtn">눌러보세요</button>
+    <button id="myBtn1">눌러보세요</button>
+    <button id="myBtn2">누르세요</button>
 
     <p id="console"></p>
 
@@ -26,10 +27,12 @@
             document.querySelector("#console").innerText="버튼을 눌렀네요?"
         };
 
-        document.querySelector("#myBtn").addEventListener("click", function()
-                {document.querySelector("#console").innerText="눌렀넹";});
+        document.querySelector("#myBtn1").addEventListener("click", function()
+            {document.querySelector("#console").innerText="눌렀넹";});
                 //global 영역에 함수를 만들지 않고도 동작한다.
                 //순서가 중요 
+        document.querySelector("#myBtn2").addEventListener("click", function()
+            {document.querySelector("#console").innerText="눌렀네요";});
 
     </script>
     

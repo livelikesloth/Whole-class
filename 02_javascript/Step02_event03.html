@@ -35,6 +35,19 @@
             let y = event.offsetY;
             document.querySelector("#myDiv").innerText="x:"+x+" y:"+y})
 
+            // 2 개의 매개변수가 선언된 함수 
+        function callMe(eventName, callback){
+            console.log("이벤트명:"+eventName);
+            //callback 함수를 호출하면서 전달할 object
+            let obj={num:1, name:"김구라"};
+            //callback 에 전달된 data type 은 함수이므로 호출할수 있다.
+            callback(obj);
+        }
+
+        callMe("배고파", function(a){
+            alert(a.name);
+        });
+
     </script>
     
 </body>

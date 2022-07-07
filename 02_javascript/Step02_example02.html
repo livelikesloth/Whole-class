@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_event.html</title>
+</head>
+<body>
+    <!-- 
+        이벤트 처리를 onXXX="" 속성을 사용해서 처리하면 global 변수(함수)가 필요하다
+        global 변수(함수)를 많이 만드는 것은 바람직 하지 않다. 
+    -->
+    <button onclick="clicked()">눌러보셈</button>
+    <button id="myBtn">눌러보셈</button>
+    <p id="console"></p>
+    <script>
+        // global 변수(함수) clicked 
+        let clicked=function(){
+            document.querySelector("#console").innerText="버튼을 눌렀네요?";
+        };
+
+        document.querySelector("#myBtn").addEventListener("click", function(){ 
+            document.querySelector("#console").innerText="앗 버튼을 눌렀네요?";
+        });
+    </script>
+</body>
+</html> 
+ 43  
+Step02_event2.html
+@@ -0,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_event2.html</title>
+    <style>
+        /* 내부 css */
+        .box{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">box</div>
+    <!--
+        css 를 적용할 요소에 style 속성을 이용해서 직접 css 를 작성할수도 있다
+        이러한 css 를 인라인 css 라고 한다. 
+        인라인 css 는 내부 css 보다 우선시 된다. 
+    -->
+    <div style="width:100px; height:100px; border:1px solid red;">box</div>
+    <div id="myDiv">box</div>
+    <div id="yourDiv">box</div>
+    <script>
+
+        //id 가 myDiv인 요소의 참조값을 찾아와서 div1 이라는 변수에 담아 놓기
+        let div1=document.querySelector("#myDiv");
+        div1.style.width="100px";
+        div1.style.height="100px";
+        div1.style.border="1px solid red";
+        //여러 단어로 조합된 css property 는 - 대신에 다음 단어의 첫글자를 대문자로 작성하면 된다.
+        div1.style.backgroundColor="yellow";
+
+        document.querySelector("#yourDiv").style.width="100px";
+        document.querySelector("#yourDiv").style.height="100px";
+        document.querySelector("#yourDiv").style.border="1px solid red";
+        document.querySelector("#yourDiv").style.backgroundColor="yellow";
+    </script>
+</body>
+</html> 
+ 60  
+Step02_event3.html
+@@ -0,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_event3.html</title>
+    <style>
+        .box{
+            width: 300px;
+            height: 300px;
+            border: 1px solid red;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="box" id="myDiv"></div>
+    <script>
+        //1. 위의 div 에 "mousedown" 이벤트가 일어나면 div 의 배경색을 노란색으로 바꿔 보세요.
+        // hint :  .style.backgroundColor="색상";
+        document.querySelector("#myDiv").addEventListener("mousedown", function(){
+            document.querySelector("#myDiv").style.backgroundColor="yellow";
+        });
+
+        //2. 위의 div 에 "mouseup" 이벤트가 일어나면 div 의 배경색을 흰색으로 바꿔 보세요.
+        document.querySelector("#myDiv").addEventListener("mouseup", function(){
+            document.querySelector("#myDiv").style.backgroundColor="white";
+        });
+
+        //3. 위의 div 에 "mousemove" 이벤트가 일어 날때 마다 해당 마우스의 좌표를 
+        //   div 의 innerText 로 출력하도록 해 보세요.
+        //  출력형식=>   x좌표: 100, y좌표: 200 
+        //  구글 검색 키워드 => addEventListener  mousemove  x y  
+        document.querySelector("#myDiv").addEventListener("mousemove", function(e){
+            console.log("mousemove!");
+            console.log(e);
+            //출력할 정보 구성하기
+            let info="x좌표: "+e.offsetX+", y좌표:"+e.offsetY;
+            //div 의 innerText 로 출력하기
+            document.querySelector("#myDiv").innerText=info;
+        });
+
+        // 2 개의 매개변수가 선언된 함수 
+        function callMe(eventName, callback){
+            console.log("이벤트명:"+eventName);
+            //callback 함수를 호출하면서 전달할 object
+            let obj={num:1, name:"김구라"};
+            //callback 에 전달된 data type 은 함수이므로 호출할수 있다.
+            callback(obj);
+        }
+
+        callMe("배고파", function(a){
+            alert(a.name);
+        });
+    </script>
+</body>
+</html> 
+ 28  
+Step02_example.html
+@@ -0,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example.html</title>
+</head>
+<body>
+    <button id="plusBtn">증가</button>
+    <button id="minusBtn">감소</button>
+    <p id="console">0</p>
+    <script>
+
+        let count=0;
+
+        document.querySelector("#plusBtn").addEventListener("click", function(){
+            count = count+1;
+            document.querySelector("#console").innerText=count+"px";
+        });
+
+        document.querySelector("#minusBtn").addEventListener("click", function(){
+            count = count-1;
+            document.querySelector("#console").innerText=count+"px";
+        });
+    </script>
+</body>
+</html> 
+ 72  
+Step02_example2.html
+@@ -0,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example2.html</title>
+    <style>
+        #kimImg{
+            transition: all 0.5s ease-out;
+        }
+    </style>
+</head>
+<body>
+    <button id="moveRightBtn">우측으로 움직이기</button>
+    <button id="moveLeftBtn">왼쪽으로 움직이기</button>
+    <button id="moveRightBottomBtn">우하단 으로 움직이기</button>
+    <button id="resetBtn">초기화</button>
+    <br>
+    <img src="images/kim1.png" id="kimImg">
+    <script>
+        /*
+            아래의 mLeft 변수를 활용해서 
+            움직이기 버튼을 누를때 마다 김구라 이미지의 왼쪽 마진을 10px 씩 증가 시켜서
+            이미지가 우측으로 100px 씩 움직이도록 프로그래밍 해 보세요.
+            
+            hint)
+            .style.marginLeft = mLeft+"px";
+        */
+
+        //local 영역에서 공통으로 사용할 지역변수를 만들고 초기값 0 대입
+        let mLeft=0;
+        let mTop=0;
+
+        document.querySelector("#moveRightBottomBtn").addEventListener("click", function(){
+            //변수에 있는 숫자를 100씩 증가 시키고 
+            mLeft = mLeft+100;
+            mTop = mTop+100;
+            //변수에 있는 숫자를 이미지의 왼쪽 마진에 적용한다.
+            document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+            //변수에 있는 숫자를 이미지의 위쪽 마진에 적용한다.
+            document.querySelector("#kimImg").style.marginTop = mTop+"px";
+        });
+
+
+        document.querySelector("#moveRightBtn").addEventListener("click", function(){
+            //변수에 있는 숫자를 100씩 증가 시키고 
+            mLeft = mLeft+100;
+            //변수에 있는 숫자를 이미지의 왼쪽 마진에 적용한다.
+            document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+        });
+
+        document.querySelector("#moveLeftBtn").addEventListener("click", function(){
+            if(mLeft != 0){
+                //변수에 있는 숫자를 100씩 감소 시키고 
+                mLeft = mLeft-100;
+                //변수에 있는 숫자를 이미지의 왼쪽 마진에 적용한다.
+                document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+            }
+
+        });
+
+        document.querySelector("#resetBtn").addEventListener("click", function(){
+            mLeft = 0;
+            mTop = 0;
+            document.querySelector("#kimImg").style.marginLeft = mLeft+"px";
+            document.querySelector("#kimImg").style.marginTop = mTop+"px";
+        });
+    </script>
+</body>
+</html> 
