@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example05.html</title>
+    <style>
+        .box{
+            width: 100px;
+            height:100px;
+            border: 10px solid blue;
+        }
+        /*클래스명이 box인 요소에 마우스가 hover 되었을 때 적용할 css */
+        .box:hover{
+            background-color: yellow;
+            cursor:grab
+        }
+        .box:active{
+            cursor:grabbing
+        }
+    </style>
+</head>
+<body>
+    <div class="box">div1</div>
+    <div class="box">div2</div>
+    <div class="box">div3</div>
+    <div class="box">div4</div>
+    <div class="box">div5</div>
+
+    <script>
+        /* 
+            마우스를 클릭 한 div의 innerText를 "clicked"로 바꾸는 프로그래밍 해보기
+            반복문 공부 더 하기        for(let i=n; i<n; i++){} 
+        */
+            
+        for(let i=0;i<5; i++){
+        document.querySelectorAll("div")[i].addEventListener("mousedown",function(){
+            let styles0=document.querySelectorAll("div")[i]
+            styles0.innerText="Clicked";
+            styles0.style.backgroundColor="orange"
+            styles0.style.fontSize="15px"
+        });}
+
+        // document.querySelectorAll("div")[1].addEventListener("mousedown",function(){
+        //     document.querySelectorAll("div")[1].innerText="Clicked";
+        //     document.querySelectorAll("div")[1].style.backgroundColor="green"
+        // });
+        // document.querySelectorAll("div")[2].addEventListener("mousedown",function(){
+        //     document.querySelectorAll("div")[2].innerText="Clicked";
+        //     document.querySelectorAll("div")[2].style.backgroundColor="skyblue"
+        // });
+        // document.querySelectorAll("div")[3].addEventListener("mousedown",function(){
+        //     document.querySelectorAll("div")[3].innerText="Clicked";
+        //     document.querySelectorAll("div")[3].style.backgroundColor="pink"
+        // });
+        // document.querySelectorAll("div")[4].addEventListener("mousedown",function(){
+        //     document.querySelectorAll("div")[4].innerText="Clicked";
+        //     document.querySelectorAll("div")[4].style.backgroundColor="silver"
+        // });
+    </script>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example04.html</title>
+</head>
+<body>
+    <div>두부1</div>
+    <div>두부2</div>
+    <div>두부3</div>
+    <div>두부4</div>
+    <div>두부5</div>
+    <div>두부6</div>
+    <div>두부7</div>
+    <div>두부8</div>
+    <div>두부9</div>
+    <div>두부10</div>
+
+    <button id="changeBtn1">바꾸기1</button>
+    <button id="changeBtn2">바꾸기2</button>
+    <button id="changeBtn3">바꾸기3</button>
+    <button id="changeBtn4">바꾸기4</button>
+</body>
+    <script>
+        //페이지 로딩 시점에 index 변수를 만들고 초기값0 을 대입
+        let index=0; //함수 밖에서 선언
+        document.querySelector("#changeBtn1").addEventListener("click", function(){
+            //만약 index 가 10 보다 작을 때만  if문 {}안에 있는 내용을 실행하라
+            //그렇지 않으면 (10 이상이면) 건너뛴다.
+            if(index < 10){
+                let divs=document.querySelectorAll("div");
+                divs[index].innerText="유키";
+                //index 값을 증가시킨다.
+                index = index+1;
+                //뒤로 가있는 이유는 먼저 바꾸고 옮기면 된다.
+            }
+        });
+        document.querySelector("#changeBtn2").addEventListener("click", function(){
+           //만약 index가 10과 같으면 
+            if(index == 10){
+                //함수를 종료하라
+                return; 
+            }
+                let divs=document.querySelectorAll("div");
+                divs[index].innerText="유키";
+                index = index+1;
+        });
+
+        document.querySelector("#changeBtn3").addEventListener("click", function(){
+            let divs=document.querySelectorAll("div")
+            if(index == divs.length) {
+                return;
+            }
+                divs[index].innerText="소주";
+                index = index+1;
+        })
+
+        document.querySelector("#changeBtn4").addEventListener("click", function(){
+            let divs=document.querySelectorAll("div")
+            if(index == divs.length) {
+            }
+                divs[index].innerText="재즈";
+                index = index+1;
+        })
+    </script>
+</html>

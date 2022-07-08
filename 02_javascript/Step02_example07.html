@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example07.html</title>
+    <style>
+        .ylbd{
+            width:100px;
+            height:100px;
+            background-color:orange;
+            transition: all 0.3s ease-out
+        }
+        .ylbd:hover{
+            cursor: pointer;
+            border: 12px solid blue
+        }
+    </style>
+</head>
+<body>
+
+    <img src="images/yellowbird.png" class="ylbd">
+    <script>
+        //상태값을 관리할 변수
+        let isLarge=false
+
+        let ylwbd=document.querySelectorAll(".ylbd")
+        document.querySelectorAll(".ylbd")[0].addEventListener("click", function(){
+            if(isLarge == false){
+                ylwbd[0].style.width="150px";
+                ylwbd[0].style.height="150px";
+                //확대된 상태이기 때무에 상태값을 바꾸어 준다
+                isLarge=true;
+            }else{
+                ylwbd[0].style.width="100px";
+                ylwbd[0].style.height="100px";
+                isLarge=false;
+            }
+        });
+
+    </script>
+    
+</body>
+</html>

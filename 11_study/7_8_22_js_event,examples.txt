@@ -45,8 +45,37 @@ CSS
 
 함수에 추가되는 매개변수
     정보를 더 불러오고 싶다면 매개변수를 추가해 불러오면 된다.
+    변수를 공유해서 사용가능 
+    함수 밖에서 설정해놔야 공유해서 사용가능
 
+반복문 for
+    for(let i=minnum; i<maxnum; i++){
+        console.log("오잉?");
+        console.log(i);
+        }
+
+    xxx.length를 사용해 배열의 크기대로 불러올 수 있다.
+    배열이 여러개 있다면 변수에 넣어 코드를 간단하게 만들 수 있다.
+
+조건문 if
+    어떤 명령을 조건부로 사용할 때 if(){}문을 사용하면 된다.
+     if(){} 만약()면 {}를 수행하라
+     
+     if(){1}else{2} 만약()면 {1}을 수행하고 아니면{2}를 실행하라
     
-    
+function
+    특정 시점에 일관 싱핼할 javscript들을 모아 놓을 수 있다.
+    함수를 호출(call)하면 함수 안쪽으로 실행순서가 들어간다.
+    함수는 언제 종료되는가?
+        함수 안에 있는 모든 javascript를 수행하고 더 이상 수항할 javascript 가 없을때
+        수행하다가 return 이라는 예약어를 만나도 종료가 된다.
 
+상태값(state)
+    두가지면 boolean 여러가지면 number나 string
 
+Math
+    Math.random()                   1 미만의 무작위 실수 받기
+        Math.random()*10            0이상 10 미만의 랜덤한 실수
+    Math.floor()                    내림 연산
+        Math.floor(Math.random()*)  0이상 9 이하의 랜덤한 정수.
+        

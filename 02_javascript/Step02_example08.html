@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example08.html</title>
+    <style>
+        .redbird{
+            width:100px;
+            height:100px;
+            background-color:orange;
+            transition: all 0.3s ease-out
+        }
+        .redbird:hover{
+            cursor: pointer;
+            border: 10px solid rgb(55, 55, 255)
+        }
+    </style>
+</head>
+<body>
+    <img src="images/redbird.png" class="redbird">
+    <img src="images/redbird.png" class="redbird">
+    <img src="images/redbird.png" class="redbird">
+    <img src="images/redbird.png" class="redbird">
+    <img src="images/redbird.png" class="redbird">
+    <br>
+    
+
+    <script>
+        
+        let birds=document.querySelectorAll(".redbird"); 
+
+        //이미지가 확대된 상태인지 여부를 저장하는 배열
+        let isLarges=[false,false,false,false,false];
+
+        //반복문 돌면서 모든 img 요소에 click 이벤트 리스너 등록하기
+        for(let i=0; i<birds.length; i++){
+            
+            birds[i].addEventListener("click", function(){
+                if(isLarges[i] == false){
+                    birds[i].style.width="150px";
+                    birds[i].style.height="150px";
+                    isLarges[i]=true
+                }else{
+                    birds[i].style.width="100px";
+                    birds[i].style.height="100px";
+                    isLarges[i]=false
+                }
+             }
+            );
+        };
+        
+        
+           
+
+       
+    </script>
+    
+</body>
+</html>
