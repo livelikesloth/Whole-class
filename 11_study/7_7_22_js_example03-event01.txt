@@ -1,5 +1,5 @@
- Javascript Step01_example03.html
-            ~ Step01_example03.html
+ Javascript Step01_dataType_example03.html
+            ~ Step01_event_example03.html
 
 
 
@@ -46,6 +46,13 @@ error 찾기
     검사 console 
         어느줄에 error가 있는지 찾을 수 있다.
         null - 비어있는 상태
+
+
+css
+    css 를 적용할 요소에 style 속성을 이용해서 직접 css 를 작성할수도 있다
+    이러한 css 를 인라인 css 라고 한다. 
+    인라인 css 는 내부 css 보다 우선시 된다. 
+    여러 단어로 조합된 css property 는 - 대신에 다음 단어의 첫글자를 대문자로 작성하면 된다.
         
     
 

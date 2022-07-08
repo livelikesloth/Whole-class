@@ -12,6 +12,9 @@
             height: 200px;
             border: 3px solid red;
         }
+        #bdImg{
+            transition: all 0.5s ease-out;
+        }
     </style>
 </head>
 <body>
@@ -75,7 +78,7 @@
 사진 움직이기
     <button id="moveRightBtn">우측으로 움직이기</button>
     <button id="moveLeftBtn">좌측으로 움직이기</button>
-    <button id="moveRiToBtn">우하단으로 움직이기</button>
+    <button id="moveRightBottomBtn">우하단으로 움직이기</button>
     <button id="resetBtn">초기화</button>
     <br>
     <img src="images/redbird.png" id="bdImg">
@@ -83,37 +86,32 @@
     <script>
         let=mLeft=0;
         let=mRight=0;
+        let=mTop=0
 
         document.querySelector("#moveRightBtn").addEventListener("click", function(){
             mLeft=mLeft+100;
             
             document.querySelector("#bdImg").style.marginLeft=mLeft+"px";
         });
+        document.querySelector("#moveRightBottomBtn").addEventListener("click", function(){
+            mLeft = mLeft+100;
+            mTop = mTop+100;
+            document.querySelector("#bdImg").style.marginLeft = mLeft+"px";
+            document.querySelector("#bdImg").style.marginTop = mTop+"px";
+        });
         document.querySelector("#moveLeftBtn").addEventListener("click", function(){
             if(mLeft !=0){
                 mLeft=mLeft-100;
                 document.querySelector("#bdImg").style.marginLeft=mLeft+"px"
             }
-        });//물어보기
-        document.querySelector("#moveRTBtn").addEventListener("click", function(){
-            mLeft=mLeft+100;
-            mTop=mTop+100;
-            document.querySelector("#bdImg").style.marginLeft=mLeft+"px"
-            document.querySelector("#bdImg").style.marginTop=mLopt+"px"
-
-        })
-        // document.querySelector("#resetBtn").addEventListener("click", function(){
-        //     mLeft = 0;
-        //     mRight = 0;
-        //     document.querySelector("#bdImg").style=marginLeft= mLeft+"px"
-        //     document.querySelector("#bdImg").style=marginTop= mTop+"px"
-        // })
+        });
         document.querySelector("#resetBtn").addEventListener("click", function(){
             mLeft = 0;
             mTop = 0;
-            document.querySelector("#bdIng").style.marginLeft = mLeft+"px";
+            document.querySelector("#bdImg").style.marginLeft = mLeft+"px";
             document.querySelector("#bdImg").style.marginTop = mTop+"px";
         });
+        
        
 
     </script>

@@ -1,0 +1,52 @@
+ Javascript Step01_dataType_example03.html
+            ~ Step01_event_example03.html
+
+error
+    정상 동작이 안될때
+    검사 console 동작 실행해보면 error message가 나옴
+    눌러보면sources 에서 찾아줌.
+    비교해서 찾아보고 오탈자를 찾아내면 됨.
+
+EVENT
+    이벤트 처리를 onXXX="" 속성을 사용해서 처리하면 global 변수(함수)가 필요.
+    
+        <button onclick="---js영역---"></button>
+
+        <script>
+        ||-----------||
+        ||global area||
+        ||-----------||
+        </script>
+    
+    하지만 global 변수를 많이 만드는 것은 좋지 않다. client가 수정할 수도 있음.
+    document를 통해 참조값을 알아낼 수 있다.
+        document.querySelector() 맨 앞 하나. 주로 id
+        document.querySelectorAll() 해당되는 모든 것. 주로 여러개 사용하는 것들
+        이 두 함수를 통해 알아 낼 수 있음
+    callback function 
+    함수를 전달만 해놓으면 자동으로 시점이 되면 실행 되는 함수.
+    function({이 안에 코딩만 작업해 놓으면 됨.})
+        document.querySelectorAll("지정할상대).addEventListener("stringtype", function(){
+            document.querySelector("#console").innerText="눌렀넹";});
+
+
+CSS 
+    내부 css는 스타일을 정해줌
+    inlie css 는 css를 적용할 요소에 style 속성을 이용해서 직접 css를 작성할 수 있게 만들어줌
+    selector는 필요 없음 
+    내부 css보다 우선됨 
+        Javascript로도 css를 제어할 수 있음.
+        document.querySelectorAll("div")[0].style.backgroundColor="gray"
+        document.querySelectorAll("div")[0].style.fontSize="100px"
+    속성명은 원래 -로 나뉘는데 css에서는 산술 연산자로 인식을 하기 때문에 뒷 단어 첫글자를 대문자로 바꿔줌
+        background-color -> backgroundColor
+        font-size -> fontSize
+    수가 너무 많아 부담이 가는 작업이 있다면 변수에 담아놓아서 한번에 작업할 수 있다.
+
+함수에 추가되는 매개변수
+    정보를 더 불러오고 싶다면 매개변수를 추가해 불러오면 된다.
+
+    
+    
+
+

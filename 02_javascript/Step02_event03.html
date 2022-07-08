@@ -16,7 +16,7 @@
 <body>
     <div class="box" id="myDiv"></div>
     <script>
-        //1. 위의 div에 "mpusedown" 이벤트가 일어나면 div의 배경색을 노란색으로 바꿔보세요.
+        //1. 위의 div에 "mousedown" 이벤트가 일어나면 div의 배경색을 노란색으로 바꿔보세요.
         // hint : .style.backgroundColor="색상";
         document.querySelector("#myDiv").addEventListener("mousedown",function()
             {document.querySelector("#myDiv").style.backgroundColor="yellow";})
@@ -30,7 +30,8 @@
         //   출력형식->  x좌표:100, y좌표:200
         //   구글 검색 키워드 -> addEventListener mousemove xy
         document.querySelector("#myDiv").addEventListener("mousemove",function(event)
-        {
+        {                                                                   //매개변수
+            
             let x = event.offsetX;
             let y = event.offsetY;
             document.querySelector("#myDiv").innerText="x:"+x+" y:"+y})
