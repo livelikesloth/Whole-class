@@ -1,5 +1,5 @@
  Javascript Step01_dataType_example03.html
-            ~ Step01_event_example03.html
+            ~ Step01_event_example11.html
 
 error
     정상 동작이 안될때
