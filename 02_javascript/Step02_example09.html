@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step02_example09.html</title>
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <button id="myBtn1">눌러보세요1</button>
+    <p id="result1"></p>
+    <button id="myBtn2">눌러보세요2</button>
+    <p id="result2"></p>
+    
+    <script>
+      
+
+        /*
+            버튼을 눌럿을 때 0 또는 1 또는 2 의 숫자를 랜덤하게 얻어내서 
+            얻어낸 숫자를 p 요소의 innerText로 출력해 보세요.
+
+        */
+       
+        document.querySelector("#myBtn1").addEventListener("click", function(){
+            //0~2 사이의 랜덤한 정수를 얻어낸다.
+            let ranNum1=Math.floor(Math.random()*3);
+            //p요소의 innerText로 출력하기
+            document.querySelector("#result1").innerText=ranNum1;
+        });
+          /*
+            눌러보셈 2 버튼을 눌렀을 때 "가위" or "바위" or "보" 중의 하나의 문자열을
+            랜덤하게 얻어내서 얻어낸 숫자를 p 요소 innerText로 출력해 보세요
+        */
+      
+
+
+        document.querySelector("#myBtn2").addEventListener("click", function(){
+            let data=["가위","바위","보"];
+            let ranNum2=Math.floor(Math.random()*3);
+           
+            document.querySelector("#result2").innerText=data[ranNum2];
+        });
+       
+
+    </script>
+    
+</body>
+</html>
