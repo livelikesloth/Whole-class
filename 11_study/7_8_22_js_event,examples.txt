@@ -78,4 +78,5 @@ Math
         Math.random()*10            0이상 10 미만의 랜덤한 실수
     Math.floor()                    내림 연산
         Math.floor(Math.random()*)  0이상 9 이하의 랜덤한 정수.
+    가위바위보 만들기 등 랜덤한 수를 받아내는 random()함수는 사용할 상황이 많다.
         
