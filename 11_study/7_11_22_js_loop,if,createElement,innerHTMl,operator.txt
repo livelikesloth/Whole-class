@@ -1,0 +1,161 @@
+Javascript Step02.1_leep01.html
+            ~ Step03_i0f3.html
+
+
+                                   {("string type :event name", call back function)}
+    document.querySelector("#myBtn").addEventListener("click", function(){
+        console.log("clicked2()호출됨")
+
+For
+     for(let i=0; i<5; i++){
+        
+        1.let i=0 는 for 문 안에서만 사용할 수 있는 local variable 를 만들고 초기값 0 대입
+          반복문이 수행되는 동안 유지된다.
+          for 문이 종료되는 i 는 사라진다.
+          for 문에 실행순서가 왔을 때 최초 한번만 실행된다.
+        
+        2. i<5 이 조건이 false 가 될 때 까지 for 문의{} 블럭이 반복 수행된다. 
+        3. i++ 에서 ++는 i 안에 있는 숫자를 1 증가 시키는 증감연산자 이다.
+
+    for문은 배열에 많이 사용한다.
+        let nums=[10,20,30,40,50];
+                i 는 제어변수
+    for(let i=0; i<nums.length; i++){
+        i번째 방에 들어있는 item 참조하기
+        let tmp=nums[i];
+            참조된 값 사용하기
+        console.log(tmp);
+        }
+
+Thread
+    순서대로 실행되는 작업의 흐름
+    함수를 만들어서 전달만 해 놓으면 적정한 시점에 알아서 호출 됨.]
+
+if
+    제어문, 조건부 수행
+        if(){}
+            true가 참조되면 실행됨 false면 빠져나감
+            코드블럭을 조건부로 수행하기
+
+        if (){
+        }else{}
+            두개의 블럭을 가져다 놓고 양자택일을 할 수 있다.
+            ()에 true가 참조되면 if에 작업을 수 행하고 빠져나간다.
+            false가 참조되면 else뒤의 코드블럭이 실행되고 빠져나간다.
+            양자택일
+            ifelse문을 겹쳐서 여러가지 블럭의 true false 참조한다.
+
+반복문 for 조건문 if 많이 사용됨.
+        
+
+연산자 
+    1. 산술연산자
+        number type 데이터를 연산할때 사용한다.
+        +, -, *, /, % (나머지 연산자) 
+            let result1=10+1; //11
+            let result2=10-1; //9
+            let result3=10*10; //100
+            let result4=10/2; //5
+            let result5=10%3; //1
+
+            let num1=10;
+            let num2=1;
+        산술연산을 할때 숫자가 들어있는 변수명으로 할수도 있다.
+            let result6=num1+1;
+            let result7=num1%3;
+            let result8=num1-num2;
+
+        object 혹은 array 에 들어 있는 데이터를 이용해서 연산을 할수도 있다. 
+            let obj={first:10, second:20};
+            let arr=[10, 20, 30];
+        
+            let result9=1+obj.first;
+            let result10=10*arr[1]; 
+        
+    2. 논리(boolean) 연산자
+        - 논리값을 연산해주는 연산자
+
+        -&& 는 and 연산자이고 읽을때는 "그리고" 라고 읽으면 된다.
+            연산의 법칙은 연산에 참여하는 모든 boolean type 데이터가
+            true 일때만 결과값이 true 가 나온다. 
+                만일 inputNum 이 0 보다 크고(그리고) inputNum 을 2 로 나눈 나머지가 0 과 같다면
+                    if(inputNum>0 && inputNum%2==0){
+                 console.log("입력한 수는 0보다 크고 동시에 짝수 입니다.");}\
+                
+        - || 는 or 연산자이고 읽을때는 "또는" 이라고 읽으면 된다.
+            연산의 법칙은 연산에 참여하는 모든 boolean type 데이터가
+            어느 하나만 true 이면 결과는 true 가 나온다.  
+                만일 inputNum 이 0 보다 크거나 inputNum 을 2로 나눈 나머지가 0과 같다면 
+                    if(inputNum>0 || inputNum%2==0){
+                    console.log("입력한 수는 0보다 크거나 또는 짝수 입니다.");}
+
+
+                        let result1=false&&false; //false
+                        let result2=false&&true; //false
+                        let result3=true&&false; //false
+                         let result4=true&&true; //true
+
+                        연산에 참여하는 boolean 값이 어느 하나만 true  면 결과는 true 이다.
+                        let result5=false||false; //false
+                        let result6=false||true; //true
+                        let result7=true||false; //true
+                        let result8=true||true; //true
+
+
+        -! 는 논리값을 반전시키는 not 연산자이다. 
+            읽을때는 "~가 아니면" 이라고 읽으면 된다. 
+                1. 만일 isRun 이 false 라면
+                2. 만일 isRun 이 true 가 아니라면
+                3. 만일 달리지 않을꺼면 
+                     if( !isRun ){ 
+                    }
+                    if( isRun == false){
+                만일 isRun 이 true 가 아니거나 isWait 이 true 가 아니라면 
+                만일 달리지 않거나 기다리지 않을거면
+                    if(!isRun || !isWait){
+
+        -대입 연산자.
+            =   => 우측에 있는 값을 좌측에 대입
+            +=  => 우측에 있는 값을 좌측에 있는 원래 값에 더해서 대입 
+            -=  => 우측에 있는 값을 좌측에 있는 원래 값에 빼서 대입
+            *=  => 우측에 있는 값을 좌측에 있는 원래 값에 곱해서 대입
+            /=  => 우측에 있는 값을 좌측에 있는 원래 값에 나누어서 대입
+            %=  => 우측에 있는 값을 좌측에 있는 원래 값을 나눈 나머지 값을 대입    
+        -비교 연산자
+            == => 같은지 비교
+            != => 다른지 비교
+            >  => 큰지 비교
+            >= => 크거나 같은지 비교
+            <  => 작은지 비교
+            <= => 작거나 같은지 비교  
+
+            - 비교 연산자로 주로 하는 작업
+            1. 문자열의 내용이 같은지 다른지 비교
+            2. 숫자의 크기 비교
+            3. 숫자가 같은지 다른지 비교
+            4. 논리값이 같은지 다른지 비교
+            5. 문자열의 알파벳 순서 혹은 가나다 순서 비교
+
+        -증감 연산자.
+            ++ => 1 증가 시키기
+            -- => 1 감소 시키기 
+                증감연산자를 변수 뒤에 붙이면 연산의 우선 순위가 가장 뒤쳐진다(나중에 연산된다.) 
+
+create element
+    createElement함수 element 만듦
+    append 만들어진 element를 추가함
+    예약어 this
+        xxx.addEventListener("event name", function(){
+         this <== event가 일어난 그 요소    
+        });
+
+
+insertAdjacentHTML
+    어느 구간에 입력할 것 인지 선택
+        deforestart
+    <div>
+        afterstart
+    <p>XXX</p>
+        deforeend
+    </div>
+        afterend

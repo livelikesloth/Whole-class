@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_createElement2.html</title>
+</head>
+<body>
+    <button id="makeBtn">만들기</button>
+    <div id="wrapper">
+
+    </div>
+    <script>
+        document.querySelector("#makeBtn").addEventListener("click", function(){
+            // img 요소를 만들고 참조값을 img 라는 변수에 담기
+            let img=document.createElement("img");
+            //src 속성(attribute)의 값 추가하기
+            img.setAttribute("src", "images/kim1.png");
+            img.setAttribute("id", "one")
+            img.setAttribute("alt", "김구라 이미지")
+            //id 가 wrapper 인 요소의 자식 요소로 추가하기
+            document.querySelector("#wrapper").append(img);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sep02.01_loop_test.html</title>
+</head>
+<body>
+    <script>
+        //for문은 배열에 많이 사용한다.
+        let nums=[10,20,30,40,50];
+                // i 는 제어변수
+        for(let i=0; i<nums.length; i++){
+            //i번째 방에 들어있는 item 참조하기
+            let tmp=nums[i]; //tmp 값은 만들어졌다 사라졌다를 반복한다.
+            //참조된 값 사용하기
+            console.log(tmp);
+        }
+        //object가 item으로 들어있는 배열
+        let members=[
+            {num:1, name:"두부"},
+            {num:2, name:"유키"},
+            {num:3, name:"소주"}
+        ];
+        for(let i=0; i<members.length; i++){
+            //tmp는
+            let tmp=members[i];
+            console.log(tmp.num+"|"+tmp.name);
+        }
+
+    </script>
+    
+    
+</body>
+</html>
