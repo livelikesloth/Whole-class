@@ -51,10 +51,11 @@
                     <td>${name}</td>
                     <td>${addr}</td>
                 </tr>
-            `;
-            
-            document.querySelector("tbody").insertAdjacentHTML("beforeend", str);
-        });
+            `; 
+            //연결 연산자 필요 없이 바로 출력 가능
+            //''사용하면 ${ㅇㅇ}로 아이디 사용안하고 할 수 있다.
+             document.querySelector("tbody").insertAdjacentHTML("beforeend", str);
+        });//insertAdjacentHTML 문자열을 html로 해석해서 올려라 
 
         //추가 버튼을 눌렀을때 실행할 함수 등록
         document.querySelector("#addBtn3").addEventListener("click", function(){

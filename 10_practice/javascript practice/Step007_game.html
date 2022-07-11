@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guess number game</title>
+</head>
+<body>
+    <h3>숫자를 맞춰보세요</h3>
+    <input type="text" id="numberHere" placeholder="0~100의 숫자를 입력하세요..">
+    <button id="myBtn1">맞추기!</button>&nbsp;<span id="howMany">0</span>
+    <p id="resultHere"></p>
+
+    <script>
+        Math.floor(Math.random()*101);
+        let ranNum1=Math.floor(Math.random()*101); //랜덤 숫자 설정과 변수설정
+        
+        
+      
+
+        //엔터쳤을때
+        document.querySelector("#numberHere").addEventListener("keydown", function(e){
+            if( e.keyCode == 13 ){ 
+                let numberHere1 = document.querySelector("#numberHere").value;
+                let isHigher = numberHere1 > ranNum1;
+                let isLower = numberHere1 < ranNum1;
+                if (isHigher){
+                    document.querySelector("#resultHere").innerText=numberHere1+" 보다 낮습니다."
+                }else if (isLower){
+                    document.querySelector("#resultHere").innerText=numberHere1+" 보다 높습니다."
+                }else{
+                    document.querySelector("#resultHere").innerText="정답입니다!"
+                }
+            }
+            document.querySelector("#numberHere").value=""
+            
+        });
+        //버튼 눌렀을 때
+        document.querySelector("#myBtn1").addEventListener("click", function(){
+            let numberHere1 = document.querySelector("#numberHere").value;
+            let isHigher = numberHere1 > ranNum1;
+            let isLower = numberHere1 < ranNum1;
+            if (isHigher){
+                document.querySelector("#resultHere").innerText=numberHere1+" 보다 낮습니다."
+            }else if (isLower){
+                document.querySelector("#resultHere").innerText=numberHere1+" 보다 높습니다."
+            }else{
+                document.querySelector("#resultHere").innerText="정답입니다!"
+
+            }
+        });
+       //기록 나오게 하기
+
+    </script>
+
+</body>
+</html>
