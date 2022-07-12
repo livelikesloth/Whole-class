@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step18_form02.html</title>
+    <link rel="stylesheet" href="./css/bootstrap.css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h1>회원 가입 폼</h1>
+                <form action="signup.jsp">
+                    <div class="mb-3">
+                        <label class="form-label" for="email">이메일</label>
+                        <input class="form-control" type="text" id="email" name="email">
+                        <div class="invalid-feedback">이메일 형식에 맞게 입력하세요</div>
+                        <div class="valid-feedback">사용할 수 있는 이메일 입니다.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label class="form-label" for="pwd">비밀번호</label>
+                        <input class="form-control" type="password" id="pwd" name="pwd">
+                        <div class="valid-feedback">사용할 수 있는 비밀번호 입니다.</div>
+                        <div class="invalid-feedback">사용할 수 없는 비밀번호 입니다.</div>
+                    </div>
+                    <button class="btn-btn-primary" type="submit">가입</button>
+                </form>
+                <script>
+                    document.querySelector("#email").addEventListener("input", function () {
+                        let inputEmail = this.value;// 입력한 이메일을 읽어옴
+                        let index1 = inputEmail.indexOf("@");//형식에 맞는지 확인
+                        if (index2 >= 0) {                     //@문자열이 몇번째 인덱스에 있는지 확인 
+                            this.classList.add("is-valid");
+                            this.classList.remove("is-invalid");
+                        } else {
+                            this.classList.remove("is-valid");
+                            this.classList.add("is-invalid");
+                        }
+                    });
+                    
+                </script>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
