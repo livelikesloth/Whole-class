@@ -67,3 +67,15 @@ grid
 classList
     add(), remove() 가 있음
         특정 class를 더하고 추가하는데 사용.
+
+
+display : flex
+   자식컨텐츠를 가로로 배치할 것인지, 세로로 배치할 것인지 선택하는 것.
+    display row는 flex를 사용하고 있는 것 default 값
+
+    flex-wrap : no-wrap    default
+        남은 wrap공간을 어디로 배치할 것인지 선택하는 것
+    justify content 로 공간관리를 할 수 있다.
+
+    
+   
