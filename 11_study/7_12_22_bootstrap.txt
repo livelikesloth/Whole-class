@@ -1,0 +1,62 @@
+stylesheet Step18.bootstrap.html    
+            ~
+
+bootstrap css
+    외부의 css를 불러올 수 있다.
+        bootstrap css로딩해기
+            <link rel="stylesheet" href="css/bootstrap.css">
+        다운받아온 폴더 상대경로
+    클래스 선택자를 사용해 가져다 쓸 수 있음.
+    primary, secondary, success, info, warning, danger
+        색상이름
+    mt - margin top     pt - padding top    mb - margin bottom
+    패딩, 마진 단계에 따라 5단계가 있다. 4, 8, 16, 24, 48
+    방향은 top, end, bottom, start
+    미리 만들어놓은 class로 결정하면 됨.
+
+bootstrap css
+    동작하는ui는 js로 만들어 줘야함.
+    <script src="js/bootstrap.bundle.js"></script>
+    data-XXX  인 속성  데이터 속의 값을 읽어와서 js로 사용할 수 있다.
+    value는 html내에서 바꿀 수 없음.
+    href로 id를 참조한다 마치 책갈피 처럼.
+    data-bs-target 속성값을 사용하면 value값을 마음대로 쓸 수 있다.
+
+직접 다운 받을 필요 없이 링크를 걸어서 사용할 수도 있다.
+
+
+grid
+반응형 레이아웃
+    화면의 사이즈에 따라 레이아웃이 달라짐
+    row, collumn, numbers, some words
+    col 사이즈는 12까지 있다. 1/12, 2/12 ... %단위를 사용
+    홈페이지에 사이즈 설명이 있음
+
+    Extra small	        None	<576px
+    Small	            sm	    ≥576px
+    Medium	            md	    ≥768px
+    Large	            lg	    ≥992px
+    Extra large         xl	    ≥1200px
+    Extra extra large	xxl	    ≥1400px
+
+        col-6  화면 50%
+        col-sm-6 화면 폭 576px 미만일 떄 50%
+        <div class="col-sm-6">  화면 폭 586 이상일때 50% 
+            그 이하면 100% div는 block element
+        <div class="col-md-6"> 화면 폭 768px 이상일때 50%
+            그 이하 100% 
+        <div  class="col-6 col-sm-3">
+            화면 폭이 576보다 크면 3으로 적용 크면 6으로 적용 둘다 존재하면 3으로 적용
+
+    css는 구체성이 같다면 나중에 적용된 것이 이긴다. 
+    mediaqeury 안에 있는 css는 나중에 적용된다.
+    
+    <div class="col-12 col-sm-6 col-md-3">
+        576px~767px 50%
+        768px 이상이면 25%
+        575px이하 100%
+    img-fluid는 이미지의 크기를 100% 맞추겠다(부모요소의 사이즈에 100%로 맞춘다.)
+    12등분이면 충분 그 안에서 다시 나눌 수 있기 때문
+    column을 넣을때마다 자동으로 할당되기도 한다.
+    화면움직일때 애니메이션 효과를 주고 싶다면 masonry를 사용하면 된다.
+    table의 td와 tr을 사용하는 

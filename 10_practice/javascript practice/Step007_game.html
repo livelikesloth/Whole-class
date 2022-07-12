@@ -5,16 +5,72 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guess number game</title>
+    <style>
+        h3{
+            color:rgb(46, 46, 165);
+            text-align: center;
+            
+        }
+        div{
+            width: 250px;
+            height: auto;
+            border:5px solid rgb(46, 46, 165);
+            background-color: rgb(248, 186, 71);
+            margin: auto;     
+        }
+        .inside{
+            margin-left: 4px;
+            
+        }
+        span{
+            font-size: small;
+            color:rgb(75, 69, 121)
+            ;
+        }
+        button{
+            margin-top: 4px;
+            border: 1px solid rgb(46,46,165);
+            background-color: rgb(248, 186, 71);
+            color: rgb(46,46,165);
+            padding: 3px;
+            border-radius: 5px;
+        }
+        button:hover{
+            background-color: rgb(248, 154, 71);
+            
+        }
+        
+    </style>
 </head>
 <body>
-    <h3>숫자를 맞춰보세요</h3>
-    <input type="text" id="numberHere" placeholder="0~100의 숫자를 입력하세요..">
-    <button id="myBtn1">맞추기!</button>&nbsp;<span id="howMany">0</span>
-    <p id="resultHere"></p>
+    <h3 >숫자를 맞춰보세요</h3>
+    <div>
+        <input type="text" id="numberHere" class="inside" placeholder="0~100의 숫자를 입력하세요..">
+        <button id="myBtn1">맞추기!</button><br>
+        <span id="howMany" class="inside">시도한 횟수 0</span>
+        <ul id="list" class="inside" style="list-style-type: none;">                  
+        </ul>
+        <p id="resultHere" class="inside" style="display:none"></p>
+    </div>
 
     <script>
         Math.floor(Math.random()*101);
         let ranNum1=Math.floor(Math.random()*101); //랜덤 숫자 설정과 변수설정
+        let cnt =0;
+        let span = document.querySelector("#howMany")
+        let clickCounter =function(){//시도한 횟수 나오게 하기
+            cnt+=1
+            span.innerText=`시도한 횟수 ${cnt}`;
+        }
+        let add =function(){ //기록 나오게 하기
+                    let name=document.querySelector("#resultHere").innerText;
+                    let li=document.createElement("li");
+                    li.innerText=name
+                    document.querySelector("#list").append(li); 
+                    document.querySelector("#numberHere").value=""
+                }
+        
+   
         
         
       
@@ -26,14 +82,18 @@
                 let isHigher = numberHere1 > ranNum1;
                 let isLower = numberHere1 < ranNum1;
                 if (isHigher){
-                    document.querySelector("#resultHere").innerText=numberHere1+" 보다 낮습니다."
+                    document.querySelector("#resultHere").innerText=numberHere1+" 보다 낮습니다.";
                 }else if (isLower){
-                    document.querySelector("#resultHere").innerText=numberHere1+" 보다 높습니다."
+                    document.querySelector("#resultHere").innerText=numberHere1+" 보다 높습니다.";
                 }else{
-                    document.querySelector("#resultHere").innerText="정답입니다!"
+                    document.querySelector("#resultHere").innerText=numberHere1+" 정답입니다!";
                 }
+                add();
+                clickCounter();
+                
+               
             }
-            document.querySelector("#numberHere").value=""
+            
             
         });
         //버튼 눌렀을 때
@@ -41,16 +101,19 @@
             let numberHere1 = document.querySelector("#numberHere").value;
             let isHigher = numberHere1 > ranNum1;
             let isLower = numberHere1 < ranNum1;
+            
             if (isHigher){
                 document.querySelector("#resultHere").innerText=numberHere1+" 보다 낮습니다."
             }else if (isLower){
                 document.querySelector("#resultHere").innerText=numberHere1+" 보다 높습니다."
             }else{
                 document.querySelector("#resultHere").innerText="정답입니다!"
-
             }
+            add();
+            clickCounter();
         });
-       //기록 나오게 하기
+       
+    </script>
 
     </script>
 
