@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step008.2_promise.html</title>
+</head>
+
+<body>
+    <script>
+        function job1() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('job1 ok!');
+                }, 2000);
+            });
+        }
+        function job2() {
+            return new Promise(function (resolve, reject) {
+                setTimeout(function () {
+                    resolve('job2 ok!');
+                }, 2000);
+            });
+        }
+
+        // job1().then(function (data) {
+        //     document.write('data1 ', data);
+        //     job2().then(function(data){
+        //         document.write('data2', data)
+        //     })
+        // })
+        job1()
+            .then(function(data){
+                document.write('data1 ', data); 
+                return job2();
+            })
+            .then(function(data){
+                document.write('data2', data);
+            })
+    </script>
+</body>
+
+</html>
