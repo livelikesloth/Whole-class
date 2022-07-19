@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step04_object.html</title>
+</head>
+<body>
+    <input type="text" id="inputMsg" placeholder="문자열 입력...">
+
+    <script>
+        let mem={num:1, name:"두부",addr:"페어펙스"};
+        /*
+            let num=mem.num;
+            let name=mem.name;
+            위의 두 줄을 줄여서 아래와 같이 쓸 수 있다.
+        */
+
+        //객체를 분해해서 변수에 할당하기(객체 분해 할당)
+        let {num,name}=mem;
+
+        let useMem=function({num,name}){
+            console.log(num+"|"+name);
+        };
+
+        useMem({num:2, name:"유키"});
+        useMem(mem);
+
+        //e라는 변수에 object를 담음 {keycode:x,...} 
+        document.querySelector("#inputMsg").addEventListener("keydown", function(e){
+            console.log(e.keycode);
+        });
+        //어짜피 object 가있으니 {오브젝트}식으로 작성해도 된다.
+        document.querySelector("#inputMsg").addEventListener("keydown", function({keycode}){
+            console.log(keycode);
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Step05_function01.html</title>
+</head>
+<body>
+    <script>
+        function showInfo(num=0, name="누구게", addr="어디게"){
+            console.log(num+"|"+name+"|"+addr)
+        }
+        //js에서 아무 값도 넣지 않으면 빈 것이 아니라 undefined가 들어있다.
+        showInfo(1, "두부", '페어펙스')
+        showInfo()
+
+        function useFunc(...args){//args = 배열  ...args = 빈 배열
+            console.log(args); 
+
+        }
+        useFunc();
+        useFunc(10);
+        useFunc(10,20,30);
+        useFunc(10,"Min",true);
+        
+        </script>
+    
+</body>
+</html>
