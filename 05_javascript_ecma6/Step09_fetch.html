@@ -11,6 +11,7 @@
 
 <body>
     <h1>친구목록 입니다.</h1>
+    <p> 여기는 HNJN의 서버</p>
     <button id="moreBtn">더보기</button>
     <ul id="friendList">
         <li>강아지</li>
@@ -23,6 +24,7 @@
             fetch("friends.json")
                 .then(function (response) {
                     //console.log(response);
+                    //return response.text
                     return response.json();
                 }).then(function (data) {
                     //data 는 친구 목록이 들어 있는 array 이다. 
@@ -33,7 +35,20 @@
                         document.querySelector("#friendList").append(li);
                     }
                 });
+            console.log("요청함.");
         })
+
+        let str1 = `
+            {"num":1, "name":"두부","isMale":true}
+        `;
+        let obj1 = { num: 1, name: "두부", isMale: true };
+        let obj2 = JSON.parse(str1);
+        let str2 = `
+            ["두부","유키","소주"]
+        `;
+        let arr2 = JSON.parse(str2);
+
+
     </script>
 
 </body>
