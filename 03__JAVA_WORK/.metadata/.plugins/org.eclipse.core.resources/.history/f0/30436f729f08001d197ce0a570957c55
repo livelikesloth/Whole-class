@@ -1,0 +1,8 @@
+package test.main;
+
+public class MyClass {
+	public static void main(String[] args) {
+		// run 버튼을 눌렀을 때 실행순서가 시작되는 특별한 main method
+		System.out.println("Hello, World!!");
+	}
+}
