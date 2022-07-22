@@ -2,4 +2,6 @@
 <section name="Workbench">
 	<section name="org.eclipse.ui.internal.views.markers.FiltersConfigurationDialog">
 	</section>
+	<section name="NewWizardAction">
+	</section>
 </section>

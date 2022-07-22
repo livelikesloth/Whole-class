@@ -9,5 +9,5 @@ public class MyClass {
 		
 		//콘솔창에 문자열 출력하기
 		System.out.println("Hello, World!!");
-	}
+   	}
 }
