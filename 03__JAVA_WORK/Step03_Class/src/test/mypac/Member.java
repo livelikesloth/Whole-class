@@ -14,4 +14,9 @@ public String cName;
 public String cAddr;
 //field는 =0 ,=null 할 필요 없이 초기값이 정해져 있다. 
 
+	//method
+	public void showInfo() {
+		//this 는 객체 자신의 참조값을 가리키는 예약어 
+		System.out.println("번호: "+this.cNumber+" 이름: "+this.cName+" 주소: "+this.cAddr);
+  	}
 }
