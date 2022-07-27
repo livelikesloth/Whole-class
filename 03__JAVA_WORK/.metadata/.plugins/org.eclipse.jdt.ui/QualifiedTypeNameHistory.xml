@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="test.mypac.Calculator"/>
-    <fullyQualifiedTypeName name="test.mypac.Member"/>
     <fullyQualifiedTypeName name="test.mypac.MyUtil"/>
     <fullyQualifiedTypeName name="java.io.PrintStream"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="test.mypac.Car"/>
+    <fullyQualifiedTypeName name="javax.swing.JFrame"/>
+    <fullyQualifiedTypeName name="javax.swing.JButton"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="test.mypac.myObject"/>
+    <fullyQualifiedTypeName name="test.mypac.Gun"/>
+    <fullyQualifiedTypeName name="test.mypac.Arrow"/>
+    <fullyQualifiedTypeName name="test.mypac.Messenger"/>
+    <fullyQualifiedTypeName name="test.mypac.Radio"/>
+    <fullyQualifiedTypeName name="test.mypac.Student"/>
+    <fullyQualifiedTypeName name="test.mypac.Member"/>
+    <fullyQualifiedTypeName name="test.mypac.MacBookAirM2"/>
+    <fullyQualifiedTypeName name="test.mypac.Bike"/>
 </qualifiedTypeNameHistroy>

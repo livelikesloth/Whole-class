@@ -31,4 +31,20 @@ public class myObject {
 		return new Car(); //같은 패키지 안에 있어서 import 할 필요가 없음.
 	}
 	
+	//int type을 메소드의 인자로 전달 받는 메소드
+	public void setNum(int num) {
+		System.out.println("num: :"+num);
+	}
+	//String type을 메소드의 인자로 전달 받는 메소드
+	public void setName(String name) {
+		System.out.println("name: "+name);
+	}
+	//Radio Type 을 메소드의 인자로 전달받는 메소드
+	public void useRadio(Radio r) {
+		r.listenMusic();
+	}
+	//Gun type 과 Arrow  type을 메소도의 인자로 전달 받는 메소드
+	public void attack(Gun g, Arrow a) {
+		System.out.println("총과 활로 공격을 해요!");
+	}
 }
