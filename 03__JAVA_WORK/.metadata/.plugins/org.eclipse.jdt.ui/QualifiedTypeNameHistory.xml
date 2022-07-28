@@ -18,4 +18,13 @@
     <fullyQualifiedTypeName name="test.mypac.Member"/>
     <fullyQualifiedTypeName name="test.mypac.MacBookAirM2"/>
     <fullyQualifiedTypeName name="test.mypac.Bike"/>
+    <fullyQualifiedTypeName name="test.mypac.MemberDto"/>
+    <fullyQualifiedTypeName name="java.lang.Object"/>
+    <fullyQualifiedTypeName name="test.mypac.Phone"/>
+    <fullyQualifiedTypeName name="test.mypac.HandPhone"/>
+    <fullyQualifiedTypeName name="test.mypac.SmartPhone"/>
+    <fullyQualifiedTypeName name="test.auto.Car"/>
+    <fullyQualifiedTypeName name="test.auto.Engine"/>
+    <fullyQualifiedTypeName name="test.auto.Haku"/>
+    <fullyQualifiedTypeName name="test.auto.CampingCar"/>
 </qualifiedTypeNameHistroy>
