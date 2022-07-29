@@ -27,4 +27,11 @@
     <fullyQualifiedTypeName name="test.auto.Engine"/>
     <fullyQualifiedTypeName name="test.auto.Haku"/>
     <fullyQualifiedTypeName name="test.auto.CampingCar"/>
+    <fullyQualifiedTypeName name="test.mypac.MyWeapon"/>
+    <fullyQualifiedTypeName name="test.mypac.Weapon"/>
+    <fullyQualifiedTypeName name="test.mypac.BigRoad_MaEum"/>
+    <fullyQualifiedTypeName name="test.main.mainClass02"/>
+    <fullyQualifiedTypeName name="test.mypac.Zoo"/>
+    <fullyQualifiedTypeName name="test.mypac.Zoo.Sloth"/>
+    <fullyQualifiedTypeName name="test.mypac.Zoo.Raccoon"/>
 </qualifiedTypeNameHistroy>
