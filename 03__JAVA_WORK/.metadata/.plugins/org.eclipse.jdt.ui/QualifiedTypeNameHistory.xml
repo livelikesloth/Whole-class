@@ -34,4 +34,8 @@
     <fullyQualifiedTypeName name="test.mypac.Zoo"/>
     <fullyQualifiedTypeName name="test.mypac.Zoo.Sloth"/>
     <fullyQualifiedTypeName name="test.mypac.Zoo.Raccoon"/>
+    <fullyQualifiedTypeName name="test.main.MainClass02.YourRomote"/>
+    <fullyQualifiedTypeName name="test.mypac.RemoteController"/>
+    <fullyQualifiedTypeName name="java.rmi.Remote"/>
+    <fullyQualifiedTypeName name="test.mypac.Drill"/>
 </qualifiedTypeNameHistroy>

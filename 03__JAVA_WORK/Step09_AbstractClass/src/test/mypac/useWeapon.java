@@ -1,6 +1,6 @@
 package test.mypac;
 
-public class BigRoad_MaEum extends Weapon {
+public class useWeapon extends Weapon {
 
 	@Override
 	public void attack() {
