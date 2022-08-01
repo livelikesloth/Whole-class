@@ -10,7 +10,30 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step09_AbstractClass"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step08_Extends"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step07_Array"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step06_WrapperClass"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step05_Constructor"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step04_Method"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step03_Class"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step02_Operator"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step01_DataType"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Hello"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step00_GitTest"/>
+			<item value="C:\Users\HNJN-PC\Desktop\school\03__JAVA_WORK\Step10_Interface"/>
 			<item value="C:\acorn202206\works\03__JAVA_WORK"/>
+		</list>
+	</section>
+	<section name="ChooseWorkspaceDialogSettings">
+		<item key="DIALOG_X_ORIGIN" value="265"/>
+		<item key="DIALOG_Y_ORIGIN" value="323"/>
+	</section>
+	<section name="WORKBENCH_SETTINGS">
+		<list key="ENABLED_TRANSFERS">
+			<item value="org.eclipse.ui.preferences"/>
+			<item value=""/>
+			<item value=""/>
 		</list>
 	</section>
 </section>

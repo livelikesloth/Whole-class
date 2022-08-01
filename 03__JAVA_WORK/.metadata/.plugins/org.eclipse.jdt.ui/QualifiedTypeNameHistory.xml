@@ -4,7 +4,6 @@
     <fullyQualifiedTypeName name="test.mypac.MyUtil"/>
     <fullyQualifiedTypeName name="java.io.PrintStream"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="test.mypac.Car"/>
     <fullyQualifiedTypeName name="javax.swing.JFrame"/>
     <fullyQualifiedTypeName name="javax.swing.JButton"/>
@@ -18,7 +17,6 @@
     <fullyQualifiedTypeName name="test.mypac.Member"/>
     <fullyQualifiedTypeName name="test.mypac.MacBookAirM2"/>
     <fullyQualifiedTypeName name="test.mypac.Bike"/>
-    <fullyQualifiedTypeName name="test.mypac.MemberDto"/>
     <fullyQualifiedTypeName name="java.lang.Object"/>
     <fullyQualifiedTypeName name="test.mypac.Phone"/>
     <fullyQualifiedTypeName name="test.mypac.HandPhone"/>
@@ -38,4 +36,22 @@
     <fullyQualifiedTypeName name="test.mypac.RemoteController"/>
     <fullyQualifiedTypeName name="java.rmi.Remote"/>
     <fullyQualifiedTypeName name="test.mypac.Drill"/>
+    <fullyQualifiedTypeName name="java.lang.FunctionalInterface"/>
+    <fullyQualifiedTypeName name="test.mypac.Calc"/>
+    <fullyQualifiedTypeName name="test.mypac.FruitBox"/>
+    <fullyQualifiedTypeName name="test.mypac.Apple"/>
+    <fullyQualifiedTypeName name="test.mypac.Orange"/>
+    <fullyQualifiedTypeName name="test.mypac.Banana"/>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="text.mypac.Car"/>
+    <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
+    <fullyQualifiedTypeName name="text.mypac.Member"/>
+    <fullyQualifiedTypeName name="text.mypac.MemberDto"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="test.mypac.MemberDto"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.HashSet"/>
+    <fullyQualifiedTypeName name="java.util.Set"/>
 </qualifiedTypeNameHistroy>
