@@ -15,7 +15,6 @@ public class MainClass11 {
 		if (dto == null) {
 			System.out.println(num + "번 회원은 존재하지 않습니다.");
 		} else {
-
 			System.out.println(num + "번 회원의 이름은" + dto.getName() + " 이고 주소는 " + dto.getAddr() + " 입니다.");
 		}
 	}

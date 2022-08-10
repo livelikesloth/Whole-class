@@ -115,6 +115,7 @@ public class Quiz02 extends JFrame implements ActionListener {
                e1.printStackTrace();
             }finally {
                try {
+            	   //br 이 비었는지 확인해서 비지 않았다면 br 안에 들어있는 객체의 close() 메소드 호출
                   if(br!=null)br.close();
                   if(fr!=null)fr.close();
                } catch (IOException e1) {

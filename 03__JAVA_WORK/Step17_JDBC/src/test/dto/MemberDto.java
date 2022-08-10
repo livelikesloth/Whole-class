@@ -4,8 +4,17 @@ public class MemberDto {
 	private int num;
 	private String name;
 	private String addr;
+
+	public MemberDto(int num, String name, String addr) {
+		super();
+		this.num = num;
+		this.name = name;
+		this.addr = addr;
+	}
+
+	public MemberDto() {
+	}
 	
-	public MemberDto() {}
 
 	public int getNum() {
 		return num;

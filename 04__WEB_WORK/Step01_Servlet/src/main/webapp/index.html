@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>/index.html</title>
+</head>
+<body>
+	<div class="container">
+		<h1>인덱스 페이지 입니다.</h1>
+		<ul>
+		<!-- 
+			1. 아래의 링크를 눌렀을 때 오늘의 날씨가 이쁘게 나오도록 해 보세요.
+			2. 1번을 성공했다면 날씨를 5개정도 정해 놓고 그중에서 랜덤하게 하나가 나오도록 프로그래밍 해 보세요.
+		 -->
+		 
+			<li><a href="weather" onclick="clickBtn();">오늘의 날씨 보기</a></li>
+		</ul>
+		
+		<script>
+		function random(min, max){
+			min = Math.ceil(min);
+			max = Math.floor(max);
+			return Math.floor(Math.random() * (max - min+1))+min;
+		}
+		function go(str) {
+			location.replace(str);
+			}
+		function clickBtn(){
+			random(1,5)
+			if(random == 1){
+				go("weather");
+			}
+		}
+		
+		if
+		//버튼을 눌렀을때 
+		//랜덤값이 정해지고
+		//정해진 랜덤값에 해당되는 페이지로 넘어감
+		
+		</script>
+	</div>
+</body>
+</html>

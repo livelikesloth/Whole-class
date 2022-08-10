@@ -1,29 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="test.mypac.Zoo.Sloth"/>
-    <fullyQualifiedTypeName name="test.mypac.Zoo.Raccoon"/>
-    <fullyQualifiedTypeName name="test.main.MainClass02.YourRomote"/>
-    <fullyQualifiedTypeName name="test.mypac.RemoteController"/>
-    <fullyQualifiedTypeName name="java.rmi.Remote"/>
-    <fullyQualifiedTypeName name="test.mypac.Drill"/>
-    <fullyQualifiedTypeName name="test.mypac.Calc"/>
-    <fullyQualifiedTypeName name="test.mypac.FruitBox"/>
-    <fullyQualifiedTypeName name="test.mypac.Apple"/>
-    <fullyQualifiedTypeName name="test.mypac.Orange"/>
-    <fullyQualifiedTypeName name="test.mypac.Banana"/>
-    <fullyQualifiedTypeName name="text.mypac.Car"/>
-    <fullyQualifiedTypeName name="java.lang.reflect.Member"/>
-    <fullyQualifiedTypeName name="text.mypac.Member"/>
     <fullyQualifiedTypeName name="text.mypac.MemberDto"/>
-    <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="java.util.ArrayList"/>
     <fullyQualifiedTypeName name="test.mypac.MemberDto"/>
-    <fullyQualifiedTypeName name="java.util.HashMap"/>
     <fullyQualifiedTypeName name="java.util.HashSet"/>
     <fullyQualifiedTypeName name="java.util.Set"/>
     <fullyQualifiedTypeName name="java.util.Iterator"/>
     <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.RuntimeException"/>
     <fullyQualifiedTypeName name="java.util.Random"/>
     <fullyQualifiedTypeName name="test.mypac.SleepyException"/>
@@ -31,7 +13,6 @@
     <fullyQualifiedTypeName name="frame01.MyFrame"/>
     <fullyQualifiedTypeName name="java.awt.LayoutManager"/>
     <fullyQualifiedTypeName name="java.awt.GridLayout"/>
-    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
     <fullyQualifiedTypeName name="java.awt.event.ActionEvent"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="frame07.MyFrame"/>
@@ -60,4 +41,23 @@
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.FileInputStream"/>
     <fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+    <fullyQualifiedTypeName name="java.awt.BorderLayout"/>
+    <fullyQualifiedTypeName name="java.net.ConnectException"/>
+    <fullyQualifiedTypeName name="java.sql.DriverManager"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="java.util.Map"/>
+    <fullyQualifiedTypeName name="java.util.HashMap"/>
+    <fullyQualifiedTypeName name="java.util.concurrent.atomic.AtomicIntegerFieldUpdater"/>
+    <fullyQualifiedTypeName name="test.dto.FriendsDto"/>
+    <fullyQualifiedTypeName name="java.sql.PreparedStatement"/>
+    <fullyQualifiedTypeName name="java.sql.Connection"/>
+    <fullyQualifiedTypeName name="test.util.DBConnect"/>
+    <fullyQualifiedTypeName name="java.sql.ResultSet"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="test.dao.MemberDao"/>
+    <fullyQualifiedTypeName name="java.util.ArrayList"/>
+    <fullyQualifiedTypeName name="java.util.List"/>
+    <fullyQualifiedTypeName name="java.beans.PropertyChangeListener"/>
+    <fullyQualifiedTypeName name="javax.swing.table.TableCellEditor"/>
+    <fullyQualifiedTypeName name="test.dto.MemberDto"/>
 </qualifiedTypeNameHistroy>

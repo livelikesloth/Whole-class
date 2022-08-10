@@ -27,7 +27,9 @@ public class MainClass08 {
 			// DBConnect 객체를 이용해서 Connection 객체의 참조값을 얻어온다.
 			conn = new DBConnect().getConn();
 			// 실행할 sql 문
-			String sql = "INSERT INTO member" + " (num, name, addr)" + " VALUES(member_seq.NEXTVAL, ?, ?)";
+			String sql = "INSERT INTO member" 
+					+ " (num, name, addr)" 
+					+ " VALUES(member_seq.NEXTVAL, ?, ?)";
 			// PreparedStatement 객체 얻어내기
 			pstmt = conn.prepareStatement(sql);
 			// ? 바인딩 할게 있으면 바인딩 한다.
