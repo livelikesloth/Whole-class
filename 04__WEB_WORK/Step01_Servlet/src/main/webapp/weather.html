@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>오늘의 날씨 페이지2 입니다.</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" />
+</head>
+<body>
+	<p class="alert alert-primary">오늘의 날씨 : <span id="weather"></span> </p>
+	<a href="/Step01_Servlet">인덱스로 가기</a>
+	
+	<script>
+	//오늘의 날씨를 배열에 미리 준비한다.
+	const weathers=["맑음!", "흐림!", "비옴!", "비많이옴!", "비엄청많이옴!"]
+	//0~4 사이의 랜덤한 정수를 얻어낸다
+	const ranNum = Math.floor(Math.random()*5);
+	//id가 weather인 요소에 오늘의 날씨를 출력한다.
+	document.querySelector("#weather").innerText=weathers[ranNum];	
+	</script>
+</body>
+</html>
