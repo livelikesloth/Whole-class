@@ -13,7 +13,7 @@ import javax.sql.DataSource;
  * - 자바에서 객체를 콩(bean)으로 부르기도 한다.
  * - 최초 Connection이 필요한 시점에 미리 Connection 여러개를 얻어내서 Connection Pool에 넣어 놓고 필요할 때 가져다 쓰고 다 쓴 다음 반납하는 구조로 사용한다.
  * 	 Connection Pool에서 Connection 한개를 가져오는 방법
- * 	 Connection conn = neww DbcpBean().getConn();
+ * 	 Connection conn = new DbcpBean().getConn();
  * - 다 사용한 다음 반납하는 방법
  * 	 conn.close(); // close()메소드를 호출하면 자동으로 Pool에 반납된다.
  */
