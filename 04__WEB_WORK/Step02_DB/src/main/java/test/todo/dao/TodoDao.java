@@ -10,53 +10,194 @@ import test.todo.dto.TodoDto;
 import test.util.DbcpBean;
 
 public class TodoDao {
-	//자신의 참조값을 저장할 static 필드 선언
+	//2. 자신의 참조값을 저장할수 있는 static 필드 선언
 	private static TodoDao dao;
-	//외부에서 객체 생성하지 못하게 만듦 --같은이름으로 못만들게 하려는거?
+	
+	//1. 외부에서 객체 생성하지 못하도록 생성자의 접근 지정자를 private 로 지정
 	private TodoDao() {}
-	//TodoDao 객체의 참조값을 리턴해주는 public static 메소드 만들기
+	
+	//3. 자신의 참조값을 리턴해주는 static 메소드 만들기
 	public static TodoDao getInstance() {
-		if(dao==null){//만일 static 필드가 null 이면 (최초로 이 메소드가 호출 된것이라면)
-			dao=new TodoDao(); //TodoDao 객체를 생성해서 static 필드에 저장한다.
+		//application 시작이후 최초로 호출된다면
+		if(dao==null) {
+			//TodoDao 객체를 생성해서 static 필드에 담아둔다.
+			dao=new TodoDao();
 		}
-		return dao; //static 필드에 저장된 TodoDao 객체의 참조값을 리턴해 준다.
+		//static 필드에 저장되어 있는 TodoDao 객체의 참조값을 리턴해 준다.
+		return dao;
 	}
-	//전체 회원 목록을 리턴하는 메소드
-	public List<TodoDto> getList(){
-		//회원 목록을 담을 객체 생성
-		List<TodoDto> list = new ArrayList<>();
-
-		//로컬변수 생성 리셋
+	//할일을 저장하는 메소드
+	public boolean insert(TodoDto dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag = 0;
+		try {
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = "INSERT INTO todo"
+					+ " (num, content, regdate)"
+					+ " VALUES(todo_seq.NEXTVAL, ?, SYSDATE)";
+			pstmt = conn.prepareStatement(sql);
+			//? 에 바인딩할 내용이 있으면 여기서 바인딩
+			pstmt.setString(1, dto.getContent());
+			//insert or update or delete 문 수행하고 변화된 row 의 갯수 리턴 받기
+			flag = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (flag > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	//할일을 수정하는 메소드
+	public boolean update(TodoDto dto) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag = 0;
+		try {
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = "UPDATE todo"
+					+ " SET content=?"
+					+ " WHERE num=?";
+			pstmt = conn.prepareStatement(sql);
+			//? 에 바인딩할 내용이 있으면 여기서 바인딩
+			pstmt.setString(1, dto.getContent());
+			pstmt.setInt(2, dto.getNum());
+			//insert or update or delete 문 수행하고 변화된 row 의 갯수 리턴 받기
+			flag = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (flag > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	//할일을 삭제하는 메소드
+	public boolean delete(int num) {
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		int flag = 0;
+		try {
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = "DELETE FROM todo"
+					+ " WHERE num=?";
+			pstmt = conn.prepareStatement(sql);
+			//? 에 바인딩할 내용이 있으면 여기서 바인딩
+			pstmt.setInt(1, num);
+			//insert or update or delete 문 수행하고 변화된 row 의 갯수 리턴 받기
+			flag = pstmt.executeUpdate();
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			try {
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		if (flag > 0) {
+			return true;
+		} else {
+			return false;
+		}
+	}
+	//할일 한개의 정보를 리턴하는 메소드
+	public TodoDto getData(int num) {
+		TodoDto dto=null;
 		Connection conn = null;
 		PreparedStatement pstmt = null;
 		ResultSet rs = null;
 		try {
-			// Connection 객체의 참조값 얻어오기 (Connection Pool 에서 하나 가져오기)
+			//Connection 객체의 참조값 얻어오기 
 			conn = new DbcpBean().getConn();
-			// 실행할 sql 문 작성
-			String sql = "select num, name, regdate"
-					+ " from todo"
-					+ "order by num asc";// --------------------------------------------------------- 여기 sql문
-			// sql 문을 전달하면서 PreparedStatement 객체의 참조값 얻어오기
+			//실행할 sql 문 작성
+			String sql = "SELECT content,TO_CHAR(regdate,'YYYY.MM.DD HH24:MI') regdate"
+					+ " FROM todo"
+					+ " WHERE num=?";
+			//PreparedStatement 객체의 참조값 얻어오기
 			pstmt = conn.prepareStatement(sql);
-			// ? 에 값을 바인딩 할게 있으면 한다.
-			// --------------------------------------------------------------------------- 여기 바인딩
-			// select 문 수행하고 결과를 ResultSet 으로 받아온다.
+			//? 에 바인딩할 내용이 있으면 여기서 바인딩
+			pstmt.setInt(1, num);
+			//select 문 수행하고 결과를 ResultSet 으로 받아오기
 			rs = pstmt.executeQuery();
-			// 반복문 돌면서 ResultSet 의 cursor 를 한칸씩 내린다.
-			while (rs.next()) {
-			// -------------------------------------- cursor 가 위치한 곳의 칼럼 데이터 추출해서 어딘가에 담기
-			//TodoDto 를 생성해줍니다.
-			TodoDto dto = new TodoDto();
-			//ResultSet에서 읽어온 정보를 TodoDto 객체의 Setter 메소드를 이용해 담는다.
-			dto.setNum(rs.getInt("num"));
-			dto.setName(rs.getString("name"));
-			dto.setDate(rs.getString("regdate"));
-			//한가지의 할일을 담고 있는 TodoDto객체의 참조값을 ArrayList에 누적시키기
-			list.add(dto);
+			//select 된 결과가 있다면 ResultSet 객체에 있는 내용을 추출해서 원하는 Data type 으로 포장하기
+			if (rs.next()) {
+				//TodoDto 객체를 생성해서 select 된 결과를 담아준다. 
+				dto=new TodoDto();
+				dto.setNum(num);
+				dto.setContent(rs.getString("content"));
+				dto.setRegdate(rs.getString("regdate"));
 			}
 		} catch (Exception e) {
-			// 혹시 예외가 발생한다면 예외정보를 콘솔에 출력해서 에러의 원인 찾기
+			e.printStackTrace();
+		} finally {
+			try {
+				if (rs != null)
+					rs.close();
+				if (pstmt != null)
+					pstmt.close();
+				if (conn != null)
+					conn.close();
+			} catch (Exception e) {
+			}
+		}
+		return dto;
+	}
+	//할일 목록을 리턴하는 메소드
+	public List<TodoDto> getList(){
+		List<TodoDto> list=new ArrayList<>();
+		Connection conn = null;
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try {
+			//Connection 객체의 참조값 얻어오기 
+			conn = new DbcpBean().getConn();
+			//실행할 sql 문 작성
+			String sql = "SELECT num, content, TO_CHAR(regdate, 'YY.MM.DD AM HH:MI') regdate"
+					+ " FROM todo"
+					+ " ORDER BY num ASC";
+			//PreparedStatement 객체의 참조값 얻어오기
+			pstmt = conn.prepareStatement(sql);
+			//? 에 바인딩할 내용이 있으면 여기서 바인딩
+
+			//select 문 수행하고 결과를 ResultSet 으로 받아오기
+			rs = pstmt.executeQuery();
+			//반복문 돌면서 ResultSet 객체에 있는 내용을 추출해서 원하는 Data type 으로 포장하기
+			while (rs.next()) {
+				// select 된 row 하나당 TodoDto 객체를 하나씩 생성해서 
+				TodoDto dto=new TodoDto();
+				// row 에 있는 칼럼 내용을 담고 
+				dto.setNum(rs.getInt("num"));
+				dto.setContent(rs.getString("content"));
+				dto.setRegdate(rs.getString("regdate"));
+				// 위에서 생성된 TodoDto 객체의 참조값을 List 에 누적 시킨다.
+				list.add(dto);
+			}
+		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
 			try {
@@ -72,25 +213,3 @@ public class TodoDao {
 		return list;
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

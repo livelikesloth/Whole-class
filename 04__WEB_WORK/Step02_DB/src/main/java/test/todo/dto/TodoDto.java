@@ -2,16 +2,16 @@ package test.todo.dto;
 
 public class TodoDto {
 	private int num;
-	private String name;
-	private String date;
+	private String content;
+	private String regdate;
 	
 	public TodoDto() {}
 
-	public TodoDto(int num, String name, String date) {
+	public TodoDto(int num, String content, String regdate) {
 		super();
 		this.num = num;
-		this.name = name;
-		this.date = date;
+		this.content = content;
+		this.regdate = regdate;
 	}
 
 	public int getNum() {
@@ -22,22 +22,21 @@ public class TodoDto {
 		this.num = num;
 	}
 
-	public String getName() {
-		return name;
+	public String getContent() {
+		return content;
 	}
 
-	public void setName(String name) {
-		this.name = name;
+	public void setContent(String content) {
+		this.content = content;
 	}
 
-	public String getDate() {
-		return date;
+	public String getRegdate() {
+		return regdate;
 	}
 
-	public void setDate(String date) {
-		this.date = date;
+	public void setRegdate(String regdate) {
+		this.regdate = regdate;
 	}
-	
 	
 	
 }
