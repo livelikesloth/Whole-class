@@ -33,8 +33,7 @@ public class LoginFilter implements Filter{
 	public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain)
 			throws IOException, ServletException {
 		
-		//1. 로그인된 클라이언트인지 확인한다.
-		
+		//1. 로그인된 클라이언트인지 확인한다.(세션이 필요한데 위에서 session을 정의하지 않음 )
 		//부모 type 을 자식 type 으로 casting!
 		HttpServletRequest req=(HttpServletRequest)request;
 		//자식 type 을 이용해서 HttpSession 객체의 참조값을 얻어낸다.

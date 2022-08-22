@@ -27,8 +27,13 @@
 			e.preventDefault();
 			
 			//폼에 입력한 내용을 전송할 query 문자열로 만들기
-			const form=document.querySelector("#myForm"); //폼의 참조값
+			const form=document.querySelector("#myForm2"); //폼의 참조값
 			const qs=new URLSearchParams(new FormData(form)).toString(); //query string
+			/*
+				qs는 아래와 같은 형식의 문자열이다.
+				name=김구라&addr=노량진
+			*/
+			
 			
 			//페이지 전환 없이 post 방식으로 insert.jsp 페이지로 전송하기 
 			fetch("insert.jsp", {

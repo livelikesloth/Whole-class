@@ -22,6 +22,7 @@
 	<div class="container">
 		<h1>로그인 폼</h1>
 		<form action="login.jsp" method="post">
+		<!-- 로그인 성공 후 어디로 갈 지에 대한 정보를 url 이라는 파라미터 명으로 같이 전송되도록 한다. -->
 			<input type="hidden" name="url" value="<%=url%>"/>
 			<div>
 				<label class="form-label" for="id">아이디</label>
