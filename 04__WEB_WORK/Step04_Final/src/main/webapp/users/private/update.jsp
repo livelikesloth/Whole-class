@@ -11,9 +11,12 @@
  	UsersDto dto=new UsersDto();
  	dto.setId(id);
  	dto.setEmail(email);
+ 	//만일 profile 이미지를 등록 했다면(profile 이미지가 empty 가 아니라면)
  	if(!profile.equals("empty")){
+ 		//dto 에 전송된 프로필 이미지 경로를 담아준다.
  		dto.setProfile(profile);
  	}
+ 	//위의 if 문 안쪽 블럭이 수행되지 않았으면 dto에 profile 이라는 필드에는 null이 들어있다.
  	//2. DB 에 수정반영하고
  	boolean isSuccess=UsersDao.getInstance().update(dto);
  	//3. 응답한다.
