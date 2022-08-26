@@ -63,6 +63,17 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
 </head>
 <body>
+<%--
+	navbar.jsp 페이지를 include 하고
+	
+	"thisPage" 라는 파라미터 명으로 "file"이란 문자열 전달하기
+	
+	그러면 navbar.jsp 페이지에서는 
+	request.getParameter("thisPage") 또는 ${param.thisPage} 
+	로 파라미터를 추출 할 수 있다.
+--%>
+<jsp:include page="/WEB-INF/include/navbar.jsp"></jsp:include>
+<jsp:param value="file" name="thisPage" />
 	<div class="container">
 		<h1>자료실 목록 입니다.</h1>
 		<table class="table table-striped">

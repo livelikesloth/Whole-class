@@ -11,7 +11,7 @@
 
 </head>
 <body>
-	<jsp:include page="/test_jstl/navbar.jsp"></jsp:include>
+	<jsp:include page="/WEB-INF/include/navbar.jsp"></jsp:include>
 	<div class="container">
 		
 		<c:choose>

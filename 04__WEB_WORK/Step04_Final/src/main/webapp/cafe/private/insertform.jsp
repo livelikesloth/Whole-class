@@ -82,6 +82,7 @@
 		}
 			
 		function submitContents(elClickedObj) {
+			//SmartEditor 에 의해 만들어진(작성한글) 내용이 textarea의 value가 되도록 한다.
 			oEditors.getById["content"].exec("UPDATE_CONTENTS_FIELD", []);	// 에디터의 내용이 textarea에 적용됩니다.
 			
 			// 에디터의 내용에 대한 값 검증은 이곳에서 document.getElementById("content").value를 이용해서 처리하면 됩니다.

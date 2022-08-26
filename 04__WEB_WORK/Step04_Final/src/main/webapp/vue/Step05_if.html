@@ -17,10 +17,12 @@
 <body>
     <h1>v-if and v-show 사용하기</h1>
     <div id="app">
+    <!--  if는 문서 객체를 만들지 말지를 결정한다(추가,제거) -->
         <div class="box" v-if="true">box1</div>
         <div class="box" v-if="false">box2</div>
         <div class="box" v-if="isMake">box3</div>
         isMake <input type="checkbox" v-model="isMake">
+        <!-- v-show는 문서 객체를 보일지 숨길지를 결정한다. -->
         <div class="box" v-show="true">box4</div>
         <div class="box" v-show="false">box5</div>
         <div class="box" v-show="isShow">box6</div>

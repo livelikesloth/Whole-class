@@ -19,10 +19,12 @@
         </ul>
         <h2>목록출력3</h2>
         <ul>
+        	<!-- 순서가 중요 첫번째는 아이템 두번째는 인덱스 -->
             <li v-for="(item, index) in nums">{{item}} {{index}}</li>
         </ul>
         <h2>목록출력4</h2>
         <ul>
+        <!--  ITEM은 object니까 .name  .addr가능 -->
             <li v-for="item in members">
                 이름 : {{item.name}}
                 주소 : {{item.addr}}

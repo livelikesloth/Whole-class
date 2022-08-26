@@ -15,7 +15,18 @@
                 v-for="(item, index) in imageList"
                 v-bind:imageinfo="item"
                 v-bind:key="index"></figure-component>
+        
+        
         </div>
+        <h1>bind:src가 필요한 이유</h1>
+        <p>{{path}}</p>
+        <p v-text="path"></p>
+        <!-- 
+         	<img src="모델명"/> 형태로는 사용이 불가하고
+         	아래와 같이 v-bind:src"모델명" 형식을 사용해야 한다.
+         -->
+        <img v-bind:src="path">
+        
     </div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script>
@@ -40,7 +51,8 @@
                         {src:"images/image2.png", caption:"어쩌구... 저쩌구..."},
                         {src:"images/image3.png", caption:"어쩌구... 저쩌구..."},
                         {src:"images/image4.png", caption:"어쩌구... 저쩌구..."}
-                    ]
+                    ],
+                    path:"images/kim1.png"
                 };
             }
         });
